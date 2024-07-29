@@ -1,5 +1,7 @@
 project:
   type: website
   output-dir: docs
-
+theme: 
+  dark: [cosmo, theme-dark.scss]
+  light: [cosmo, theme.scss]
 editor: source

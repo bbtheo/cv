@@ -11,10 +11,7 @@ format:
       light: [cosmo, theme.scss]
     css: styles.css
     page-layout: full
-  ipynb: default
-  textile: default
-format-links:
-  - textile
+  pdf: default 
 ---
 
 ::: {.columns .header-col aling="center"}
@@ -124,7 +121,6 @@ Strengthened German language skills through a language course.
 ::::
 
 -   Played a key role in a joint research project by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources.
-
 -   Utilized R for comprehensive data analysis and visualization, and employed SQLite for database management.
 
 ### Intern
@@ -140,14 +136,15 @@ Strengthened German language skills through a language course.
 
 
 -   Monitored and reported on the Austrian economic situation, providing valuable insights into economic trends and developments.
-
 -   Attended and reported on meetings of international organizations, enhancing understanding of global economic policies and practices.
 
 ## Projects
 
 ## Positions of Responsibility
 
--   **Vote Counter:** Authorized by the group of Western countries to serve as a vote counter in the Secretary-General Election of the United Nations Industrial Development Organization.
--   **Board Member:** Actively served as a board member of the Economics Students’ Association, contributing to the organization's strategic planning and activities.
+### Vote Counter 
+Authorized by the group of Western countries to serve as a vote counter in the Secretary-General Election of the United Nations Industrial Development Organization.
+### Board Membe 
+Actively served as a board member of the Economics Students’ Association, contributing to the organization's strategic planning and activities.
 :::
 :::
