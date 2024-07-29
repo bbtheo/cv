@@ -11,16 +11,21 @@ format:
       light: [cosmo, theme.scss]
     css: styles.css
     page-layout: full
-  #typst: papersize: a4
   docx: default
   markdown_github: default
+format-links:
+  - docx
+  - markdown_github
+  - text: Current version
+    href: https://bbtheo.github.io/cv/cv.html
+    icon: github
 ---
 
 ::: {.columns .header-col aling="center"}
 ::: {.column .header-col width="70%"}
 ### Profile
 
-I am a professional with a advanced degree in Economics, and a neearly finished one in Data Science from the University of Helsinki. I have  specialized in machine learning methods, particularly Bayesian ones, and also have experience in econometrics, statistics, and mathematics. I'm proficient in R, Python, and SQL, and have worked extensively on building and maintaining data pipelines, creating machine learning models, and informative data visualization.
+I am a professional with a advanced degree in Economics, and a nearly finished one in Data Science from the University of Helsinki. I have  specialized in machine learning methods, particularly Bayesian ones, and also have experience in econometrics, statistics, and mathematics. I'm proficient in R, Python, and SQL, and have worked extensively on building and maintaining data pipelines, creating machine learning models, and informative data visualization.
 :::
 
 ::: {.column .header-col width="30%"}
@@ -36,12 +41,12 @@ I am a professional with a advanced degree in Economics, and a neearly finished 
 
   <li>
     <i class="fa-brands fa-github"></i> 
-    <a [Github](https://github.com/bbtheo)</a>
+    [Github](https://github.com/bbtheo)
   </li>
 
   <li>
     <i class="fa-brands fa-linkedin"></i>
-    <a [Linkedin](https://www.linkedin.com/in/theo-blauberg/)</a>
+    [Linkedin](https://www.linkedin.com/in/theo-blauberg/)
   </li>
 
 </ul>
@@ -131,7 +136,7 @@ Strengthened German language skills through a language course.
 :::
 ::::
 
--   I was responsible for data analysis in a [joint research project](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:uDGL6kOW6j0C) by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources. The data was then utilized in a [working paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
+-   I was responsible for data analysis in a [joint research project](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:uDGL6kOW6j0C) by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources. The data was then further utilized in a [working paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
 
 ### Intern
 
@@ -143,7 +148,6 @@ Strengthened German language skills through a language course.
 05/2021 – 08/2021\
 :::
 ::::
-
 
 -   Monitored and reported on the Austrian economic situation, providing valuable insights into economic trends and developments for the Finnish Government.
 -   Attended and reported on meetings of UN organizations, and with local politicians. 
