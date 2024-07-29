@@ -15,13 +15,14 @@ format:
   docx: default
   ipynb: default
   textile: default
-
+format-links:
+  - pdf
+  - docx
+  - texttile
 ---
 
-
-:::: {.columns .header-col aling="center"}
+::: {.columns .header-col aling="center"}
 ::: {.column .header-col width="70%"}
-
 ### Profile
 
 A professional with advanced degrees in Data Science and Economics from the University of Helsinki. Specializes in machine learning methods, particularly Bayesian methods, with experience in econometrics, statistics, and mathematics. Proficient in R, Python, and SQL, with extensive experience in building and maintaining data pipelines, creating machine learning models, and informative data visualization.
@@ -30,53 +31,53 @@ A professional with advanced degrees in Data Science and Economics from the Univ
 ::: {.column .header-col width="30%"}
 ### Contact
 
-
 <script src="https://kit.fontawesome.com/954a9d9f43.js" crossorigin="anonymous"></script>
 
 <ul class="fa-ul" style="list-style-type: none;">
-  <li><span class="fa-li"><i class="fa-solid fa-mobile-screen"></i></span>+358407181510</li>
-  <li><span class="fa-li"><i class="fa-solid fa-at"></i></span>theo.blauberg@outlook.com</li>
-  <li><span class="fa-li"><i class="fa-brands fa-github"></i></span>
-<a href="https://github.com/bbtheo">Github</a>
-</li>
-  <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span><a href="https://www.linkedin.com/in/theo-blauberg/">Linkedin</a></li>
+
+<li><i class="fa-solid fa-mobile-screen"></i> +358407181510</li>
+
+<li><i class="fa-solid fa-at"></i> theo.blauberg\@outlook.com</li>
+
+<li><i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo"> Github</a></li>
+
+<li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/theo-blauberg/"> Linkedin</a></li>
+
 </ul>
-
-
 :::
-::::
+:::
 
-:::: {.columns aling="center"}
+::: {.columns aling="center"}
 ::: {.column .edu-col width="30%"}
 ## Education
 
 ### Master's Program in Data Science
 
 **University of Helsinki**\
-09/2021–Present\
+09/2021 - \
 
-- **Major:** Data Science
-- **Focus:** Specializing in machine learning methods, with a particular emphasis on Bayesian methods.
+-   **Major:** Data Science
+-   **Focus:** Specializing in machine learning methods, with a particular emphasis on Bayesian methods.
 
 ### Master's Program in Economics
 
 **University of Helsinki**\
-09/2020–12/2022\
+09/2020 – 12/2022\
 
 -   **Major:** Economics
 -   **Minors:** Statistics, Mathematics
--   **Master's Thesis:** Impact of Policy Shocks in the EU Emissions Trading System on Finland.
+-   (**Master's Thesis:**)\["https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf"\] Impact of Policy Shocks in the EU Emissions Trading System on Finland.
 
 ### Exchange Program
 
 **Fudan University, Shanghai**\
-09/2018–06/2019\
+09/2018 – 06/2019\
 Studied Chinese language, politics, and economics, and their implications for other East Asian countries.
 
 ### Language Course
 
 **University of Vienna**\
-09/2015–12/2015\
+09/2015 – 12/2015\
 Strengthened German language skills through a language course.
 
 ## Certifications
@@ -92,20 +93,39 @@ Strengthened German language skills through a language course.
 
 ### Data Analyst
 
-**Nordea** 06/2023 -
+:::: {.aligned-text}
+::: {.left}
+**Nordea**
+:::
+::: {.right}
+06/2023 - 
+:::
+::::
 
 ### Data Analyst
 
-**VATT Data Room**\
+:::: {.aligned-text}
+::: {.left}
+**VATT Data Room**
+:::
+::: {.right}
 08/2022 – 07/2023\
+:::
+::::
 
 -   Conducted detailed analyses of electricity market data, focusing on consumer and company responses to price changes using R.
 -   Designed and developed a Shiny app-based web page to showcase research results, enabling interactive data visualization and enhancing the communication of findings to stakeholders.
 
 ### Project Worker
 
-**City of Tampere**\
-05/2022 – 08/2022\
+:::: {.aligned-text}
+::: {.left}
+**City of Tampere**
+:::
+::: {.right}
+05/2022 – 08/2022
+:::
+::::
 
 -   Played a key role in a joint research project by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources.
 
@@ -113,8 +133,15 @@ Strengthened German language skills through a language course.
 
 ### Intern
 
+:::: {.aligned-text}
+::: {.left}
 **Embassy of Finland in Vienna**\
+:::
+::: {.right}
 05/2021 – 08/2021\
+:::
+::::
+
 
 -   Monitored and reported on the Austrian economic situation, providing valuable insights into economic trends and developments.
 
@@ -127,4 +154,4 @@ Strengthened German language skills through a language course.
 -   **Vote Counter:** Authorized by the group of Western countries to serve as a vote counter in the Secretary-General Election of the United Nations Industrial Development Organization.
 -   **Board Member:** Actively served as a board member of the Economics Students’ Association, contributing to the organization's strategic planning and activities.
 :::
-::::
+:::

@@ -24,3 +24,23 @@
 .title {
   font-size: 100px;
 }
+
+.aligned-text {
+  display: flex;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.aligned-text-edu {
+  width: 100%;
+  font-size: 1em;
+}
+
+.right{
+  margin-left: auto;
+}
+.left{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
