@@ -1,0 +1,130 @@
+<div class="columns header-col" aling="center">
+
+<div class="column header-col" width="70%">
+
+h3(#profile). Profile
+
+A professional with advanced degrees in Data Science and Economics from the University of Helsinki. Specializes in machine learning methods, particularly Bayesian methods, with experience in econometrics, statistics, and mathematics. Proficient in R, Python, and SQL, with extensive experience in building and maintaining data pipelines, creating machine learning models, and informative data visualization.
+
+
+</div>
+
+<div class="column header-col" width="30%">
+
+h3(#contact). Contact
+
+<script src="https://kit.fontawesome.com/954a9d9f43.js" crossorigin="anonymous"></script>
+<ul class="fa-ul" style="list-style-type: none;">
+<li>
+<i class="fa-solid fa-mobile-screen"></i>&#43;358407181510
+</li>
+<li>
+<i class="fa-solid fa-at"></i>theo.blauberg&#64;outlook.com
+</li>
+<li>
+<i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo">Github</a>
+</li>
+<li>
+<i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/theo-blauberg/">Linkedin</a>
+</li>
+</ul>
+
+</div>
+
+
+</div>
+
+<div class="columns" aling="center">
+
+<div class="column edu-col" width="30%">
+
+h2(#education). Education
+
+h3(#masters-program-in-data-science). Master's Program in Data Science
+
+*University of Helsinki*
+09/2021 - Present
+
+
+* *Major:* Data Science
+* *Focus:* Specializing in machine learning methods, with a particular emphasis on Bayesian methods.
+
+h3(#masters-program-in-economics). Master's Program in Economics
+
+*University of Helsinki*
+09/2020 - 12/2022
+
+
+* *Major:* Economics
+* *Minors:* Statistics, Mathematics
+* *Master's Thesis:* Impact of Policy Shocks in the EU Emissions Trading System on Finland.
+
+h3(#exchange-program). Exchange Program
+
+*Fudan University, Shanghai*
+09/2018 - 06/2019
+Studied Chinese language, politics, and economics, and their implications for other East Asian countries.
+
+h3(#language-course). Language Course
+
+*University of Vienna*
+09/2015 - 12/2015
+Strengthened German language skills through a language course.
+
+h2(#certifications). Certifications
+
+* *NVIDIA:* Fundamentals of Deep Learning
+* *NVIDIA:* Fundamentals of Accelerated Computing with CUDA Python
+* *DataCamp:* Data Scientist with R
+* *DataCamp:* Data Visualization with R
+
+
+</div>
+
+<div class="column main-col" width="70%">
+
+h2(#work-experience). Work Experience
+
+h3(#data-analyst). Data Analyst
+
+*Nordea* 06/2023 &#45;
+
+h3(#data-analyst-1). Data Analyst
+
+*VATT Data Room*
+08/2022  -  07/2023
+
+
+* Conducted detailed analyses of electricity market data, focusing on consumer and company responses to price changes using R.
+* Designed and developed a Shiny app&#45;based web page to showcase research results, enabling interactive data visualization and enhancing the communication of findings to stakeholders.
+
+h3(#project-worker). Project Worker
+
+*City of Tampere*
+05/2022  -  08/2022
+
+
+* Played a key role in a joint research project by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources.
+* Utilized R for comprehensive data analysis and visualization, and employed SQLite for database management.
+
+h3(#intern). Intern
+
+*Embassy of Finland in Vienna*
+05/2021  -  08/2021
+
+
+* Monitored and reported on the Austrian economic situation, providing valuable insights into economic trends and developments.
+* Attended and reported on meetings of international organizations, enhancing understanding of global economic policies and practices.
+
+h2(#projects). Projects
+
+h2(#positions-of-responsibility). Positions of Responsibility
+
+* *Vote Counter:* Authorized by the group of Western countries to serve as a vote counter in the Secretary&#45;General Election of the United Nations Industrial Development Organization.
+* *Board Member:* Actively served as a board member of the Economics Students' Association, contributing to the organization's strategic planning and activities.
+
+
+</div>
+
+
+</div>
