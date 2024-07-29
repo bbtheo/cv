@@ -16,16 +16,16 @@ h3(#contact). Contact
 <script src="https://kit.fontawesome.com/954a9d9f43.js" crossorigin="anonymous"></script>
 <ul class="fa-ul" style="list-style-type: none;">
 <li>
-<i class="fa-solid fa-mobile-screen"></i>&#43;358407181510
+<i class="fa-solid fa-mobile-screen"></i> &#43;358407181510
 </li>
 <li>
-<i class="fa-solid fa-at"></i>theo.blauberg&#64;outlook.com
+<i class="fa-solid fa-at"></i> theo.blauberg&#64;outlook.com
 </li>
 <li>
-<i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo">Github</a>
+<i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo"> Github</a>
 </li>
 <li>
-<i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/theo-blauberg/">Linkedin</a>
+<i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/theo-blauberg/"> Linkedin</a>
 </li>
 </ul>
 
@@ -43,7 +43,7 @@ h2(#education). Education
 h3(#masters-program-in-data-science). Master's Program in Data Science
 
 *University of Helsinki*
-09/2021 - Present
+09/2021 &#45;
 
 
 * *Major:* Data Science
@@ -52,23 +52,23 @@ h3(#masters-program-in-data-science). Master's Program in Data Science
 h3(#masters-program-in-economics). Master's Program in Economics
 
 *University of Helsinki*
-09/2020 - 12/2022
+09/2020  -  12/2022
 
 
 * *Major:* Economics
 * *Minors:* Statistics, Mathematics
-* *Master's Thesis:* Impact of Policy Shocks in the EU Emissions Trading System on Finland.
+* (*Master's Thesis:*)["https://github.com/bbtheo/gradu/blob/main/docs/bookdown&#45;thesis.pdf"] Impact of Policy Shocks in the EU Emissions Trading System on Finland.
 
 h3(#exchange-program). Exchange Program
 
 *Fudan University, Shanghai*
-09/2018 - 06/2019
+09/2018  -  06/2019
 Studied Chinese language, politics, and economics, and their implications for other East Asian countries.
 
 h3(#language-course). Language Course
 
 *University of Vienna*
-09/2015 - 12/2015
+09/2015  -  12/2015
 Strengthened German language skills through a language course.
 
 h2(#certifications). Certifications
@@ -87,31 +87,96 @@ h2(#work-experience). Work Experience
 
 h3(#data-analyst). Data Analyst
 
-*Nordea* 06/2023 &#45;
+<div class="aligned-text">
+
+<div class="left">
+
+*Nordea*
+
+
+</div>
+
+<div class="right">
+
+06/2023 &#45;
+
+
+</div>
+
+
+</div>
 
 h3(#data-analyst-1). Data Analyst
 
+<div class="aligned-text">
+
+<div class="left">
+
 *VATT Data Room*
+
+
+</div>
+
+<div class="right">
+
 08/2022  -  07/2023
 
+
+
+</div>
+
+
+</div>
 
 * Conducted detailed analyses of electricity market data, focusing on consumer and company responses to price changes using R.
 * Designed and developed a Shiny app&#45;based web page to showcase research results, enabling interactive data visualization and enhancing the communication of findings to stakeholders.
 
 h3(#project-worker). Project Worker
 
+<div class="aligned-text">
+
+<div class="left">
+
 *City of Tampere*
+
+
+</div>
+
+<div class="right">
+
 05/2022  -  08/2022
 
+
+</div>
+
+
+</div>
 
 * Played a key role in a joint research project by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources.
 * Utilized R for comprehensive data analysis and visualization, and employed SQLite for database management.
 
 h3(#intern). Intern
 
+<div class="aligned-text">
+
+<div class="left">
+
 *Embassy of Finland in Vienna*
+
+
+
+</div>
+
+<div class="right">
+
 05/2021  -  08/2021
 
+
+
+</div>
+
+
+</div>
 
 * Monitored and reported on the Austrian economic situation, providing valuable insights into economic trends and developments.
 * Attended and reported on meetings of international organizations, enhancing understanding of global economic policies and practices.
