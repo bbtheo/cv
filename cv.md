@@ -3,12 +3,13 @@
 
 ### Profile
 
-A professional with advanced degrees in Data Science and Economics from
-the University of Helsinki. Specializes in machine learning methods,
-particularly Bayesian methods, with experience in econometrics,
-statistics, and mathematics. Proficient in R, Python, and SQL, with
-extensive experience in building and maintaining data pipelines,
-creating machine learning models, and informative data visualization.
+I am a professional with a advanced degree in Economics, and a neearly
+finished one in Data Science from the University of Helsinki. I have
+specialized in machine learning methods, particularly Bayesian ones, and
+also have experience in econometrics, statistics, and mathematics. I’m
+proficient in R, Python, and SQL, and have worked extensively on
+building and maintaining data pipelines, creating machine learning
+models, and informative data visualization.
 
 ### Contact
 
@@ -21,12 +22,12 @@ creating machine learning models, and informative data visualization.
 <i class="fa-solid fa-at"></i> theo.blauberg@outlook.com
 </li>
 <li>
-<i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo">
-Github</a>
+<i class="fa-brands fa-github"></i> \<a
+[Github](https://github.com/bbtheo)</a>
 </li>
 <li>
-<i class="fa-brands fa-linkedin"></i>
-<a href="https://www.linkedin.com/in/theo-blauberg/"> Linkedin</a>
+<i class="fa-brands fa-linkedin"></i> \<a
+[Linkedin](https://www.linkedin.com/in/theo-blauberg/)</a>
 </li>
 </ul>
 
