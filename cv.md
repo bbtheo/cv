@@ -1,0 +1,155 @@
+# Theo Blauberg
+
+
+### Profile
+
+A professional with advanced degrees in Data Science and Economics from
+the University of Helsinki. Specializes in machine learning methods,
+particularly Bayesian methods, with experience in econometrics,
+statistics, and mathematics. Proficient in R, Python, and SQL, with
+extensive experience in building and maintaining data pipelines,
+creating machine learning models, and informative data visualization.
+
+### Contact
+
+<script src="https://kit.fontawesome.com/954a9d9f43.js" crossorigin="anonymous"></script>
+<ul class="fa-ul" style="list-style-type: none;">
+<li>
+<i class="fa-solid fa-mobile-screen"></i> +358407181510
+</li>
+<li>
+<i class="fa-solid fa-at"></i> theo.blauberg@outlook.com
+</li>
+<li>
+<i class="fa-brands fa-github"></i> <a href="https://github.com/bbtheo">
+Github</a>
+</li>
+<li>
+<i class="fa-brands fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/theo-blauberg/"> Linkedin</a>
+</li>
+</ul>
+
+## Education
+
+### Master’s Program in Data Science
+
+**University of Helsinki**  
+09/2021 -  
+
+-   **Major:** Data Science
+-   Specializing in machine learning methods, with a particular emphasis
+    on Bayesian methods.
+
+### Master’s Program in Economics
+
+**University of Helsinki**  
+09/2020 – 12/2022  
+
+-   **Major:** Economics
+-   **Minors:** Statistics, Mathematics, Computer Science
+-   [**Master’s
+    Thesis:**](https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf)
+    Impact of Policy Shocks in the EU Emissions Trading System on
+    Finland.
+
+### Exchange Program
+
+**Fudan University, Shanghai**  
+09/2018 – 06/2019  
+Studied Chinese language, politics, and economics, and their
+implications for other East Asian countries.
+
+### Language Course
+
+**University of Vienna**  
+09/2015 – 12/2015  
+Strengthened German language skills through a language course.
+
+## Certifications
+
+-   **DataCamp** Deep Learning in Python
+-   **NVIDIA:** Fundamentals of Deep Learning
+-   **NVIDIA:** Fundamentals of Accelerated Computing with CUDA Python
+-   **DataCamp:** Data Scientist with R
+-   **DataCamp:** Data Visualization with R
+
+## Work Experience
+
+### Data Analyst (GFCP Expert)
+
+**Nordea**
+
+06/2023 -
+
+-   Working in a team responsible for building, maintaining, and
+    monitoring models that provide real-time stopping power for card and
+    account-to-account transactions.
+
+### Data Analyst
+
+**VATT Data Room**
+
+08/2022 – 07/2023  
+
+-   I was responsible for analyses and was a cowriter of electricity
+    market data, focusing on
+    [consumer](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:2tRrZ1ZAMYUC)
+    and [company
+    responses](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC)
+    to the price shocks.
+-   Designed and developed a [Shiny app-based web
+    page](https://github.com/datahuone/shiny_app) to showcase research
+    results, enabling interactive data visualization and enhancing the
+    communication of findings to stakeholders.
+
+### Project Worker
+
+**City of Tampere**
+
+05/2022 – 08/2022
+
+-   I was responsible for data analysis in a [joint research
+    project](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:uDGL6kOW6j0C)
+    by the City of Tampere, the University of Helsinki, and VATT.
+    Responsibilities included preparing raw data for researchers and
+    integrating external data sources. The data was then utilized in a
+    [working
+    paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
+
+### Intern
+
+**Embassy of Finland in Vienna**  
+
+05/2021 – 08/2021  
+
+-   Monitored and reported on the Austrian economic situation, providing
+    valuable insights into economic trends and developments for the
+    Finnish Government.
+-   Attended and reported on meetings of UN organizations, and with
+    local politicians.
+
+## Side projects
+
+### Petanque liga website
+
+-   Latest side project is a
+    [website](https://theoblauberg.shinyapps.io/petanque_liga/) that
+    takes the names of players as input, generates a match schedule, and
+    stores the results of the games. The back-end database is a Google
+    Sheet, allowing inputs from multiple devices and displaying the same
+    data across various devices.
+
+## Positions of Responsibility
+
+### Vote Counter
+
+Authorized by the group of Western countries to serve as a vote counter
+in the Secretary-General Election of the United Nations Industrial
+Development Organization.
+
+### Board Member
+
+Actively served as a board member of the Economics Students’
+Association, contributing to the organization’s strategic planning and
+activities.
