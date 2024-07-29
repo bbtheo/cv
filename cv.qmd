@@ -11,14 +11,10 @@ format:
       light: [cosmo, theme.scss]
     css: styles.css
     page-layout: full
-  pdf: default
-  docx: default
   ipynb: default
   textile: default
 format-links:
-  - pdf
-  - docx
-  - texttile
+  - textile
 ---
 
 ::: {.columns .header-col aling="center"}
