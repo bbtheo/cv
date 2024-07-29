@@ -1,4 +1,5 @@
 project:
-  title: "cv"
+  type: website
+  output-dir: docs
 
 editor: source
