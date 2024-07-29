@@ -3,7 +3,7 @@
 
 ### Profile
 
-I am a professional with a advanced degree in Economics, and a neearly
+I am a professional with a advanced degree in Economics, and a nearly
 finished one in Data Science from the University of Helsinki. I have
 specialized in machine learning methods, particularly Bayesian ones, and
 also have experience in econometrics, statistics, and mathematics. I’m
@@ -22,12 +22,11 @@ models, and informative data visualization.
 <i class="fa-solid fa-at"></i> theo.blauberg@outlook.com
 </li>
 <li>
-<i class="fa-brands fa-github"></i> \<a
-[Github](https://github.com/bbtheo)</a>
+<i class="fa-brands fa-github"></i> [Github](https://github.com/bbtheo)
 </li>
 <li>
-<i class="fa-brands fa-linkedin"></i> \<a
-[Linkedin](https://www.linkedin.com/in/theo-blauberg/)</a>
+<i class="fa-brands fa-linkedin"></i>
+[Linkedin](https://www.linkedin.com/in/theo-blauberg/)
 </li>
 </ul>
 
@@ -114,8 +113,8 @@ Strengthened German language skills through a language course.
     project](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:uDGL6kOW6j0C)
     by the City of Tampere, the University of Helsinki, and VATT.
     Responsibilities included preparing raw data for researchers and
-    integrating external data sources. The data was then utilized in a
-    [working
+    integrating external data sources. The data was then further
+    utilized in a [working
     paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
 
 ### Intern
