@@ -32,7 +32,7 @@
     "href": "cv.html#side-projects",
     "title": "Theo Blauberg",
     "section": "Side projects",
-    "text": "Side projects\n\nPetanque liga website\n\nLatest side project is a website that takes the names of players as input, generates a match schedule, and stores the results of the games. The back-end database is a Google Sheet, allowing inputs from multiple devices and displaying the same data across various devices."
+    "text": "Side projects\n\nPetanque liga website\n\nLatest side project is a website that takes the names of players as input, generates a match schedule, and stores the results of the games. The back-end database is a Google Sheet, allowing inputs from multiple devices and displaying the same data across various devices.\n\n\n\nASCII Art generator\n\nWIP A Julia package which turns .jpg, and .png pictures to ASCII art."
   },
   {
     "objectID": "cv.html#positions-of-responsibility",

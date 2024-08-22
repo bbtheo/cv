@@ -140,6 +140,11 @@ Strengthened German language skills through a language course.
     Sheet, allowing inputs from multiple devices and displaying the same
     data across various devices.
 
+### ASCII Art generator
+
+-   WIP A Julia package which turns .jpg, and .png pictures to ASCII
+    art.
+
 ## Positions of Responsibility
 
 ### Vote Counter
