@@ -158,6 +158,11 @@ Strengthened German language skills through a language course.
 
 - Latest side project is a [website](https://theoblauberg.shinyapps.io/petanque_liga/) that takes the names of players as input, generates a match schedule, and stores the results of the games. The back-end database is a Google Sheet, allowing inputs from multiple devices and displaying the same data across various devices.
 
+
+### ASCII Art generator
+
+- WIP A Julia package which turns .jpg, and .png pictures to ASCII art.
+
 ## Positions of Responsibility
 
 ### Vote Counter 
