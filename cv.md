@@ -92,12 +92,12 @@ Strengthened German language skills through a language course.
 
 08/2022 – 07/2023  
 
--   I was responsible for analyses and was a cowriter of electricity
-    market data, focusing on
+-   I was responsible for conducting analyses and co-authoring reports
+    on electricity market data, with a particular focus on
     [consumer](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:2tRrZ1ZAMYUC)
-    and [company
-    responses](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC)
-    to the price shocks.
+    and
+    [company](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC)
+    responses to price shocks.
 -   Designed and developed a [Shiny app-based web
     page](https://github.com/datahuone/shiny_app) to showcase research
     results, enabling interactive data visualization and enhancing the
@@ -142,8 +142,8 @@ Strengthened German language skills through a language course.
 
 ### ASCII Art generator
 
--   WIP A Julia package which turns .jpg, and .png pictures to ASCII
-    art.
+-   WIP A [Julia package](https://github.com/bbtheo/ImagesToAscii.jl)
+    which turns .jpg, and .png pictures to ASCII art.
 
 ## Positions of Responsibility
 
