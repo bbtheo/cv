@@ -82,9 +82,12 @@ Strengthened German language skills through a language course.
 
 06/2023 -
 
--   Working in a team responsible for building, maintaining, and
-    monitoring models that provide real-time stopping power for card and
-    account-to-account transactions.
+-   Collaborated within a team responsible for building, maintaining,
+    and monitoring models that deliver real-time stopping power for card
+    and account-to-account transactions.
+-   Developed and maintained an internal R package to facilitate data
+    analysis and visualization. Additionally, spearheaded the
+    establishment of a Data & Analytics community within the department.
 
 ### Data Analyst
 
@@ -123,27 +126,32 @@ Strengthened German language skills through a language course.
 
 05/2021 – 08/2021  
 
--   Monitored and reported on the Austrian economic situation, providing
-    valuable insights into economic trends and developments for the
+-   Monitored and reported on the Austrian economic situation as part of
+    my role at the Finnish Embassy, delivering valuable insights into
+    economic trends and developments to inform policy decisions for the
     Finnish Government.
--   Attended and reported on meetings of UN organizations, and with
-    local politicians.
+-   Attended and provided detailed reports on meetings with UN
+    organizations and local politicians, ensuring comprehensive coverage
+    of diplomatic and political engagements.
 
 ## Side projects
 
 ### Petanque liga website
 
--   Latest side project is a
-    [website](https://theoblauberg.shinyapps.io/petanque_liga/) that
-    takes the names of players as input, generates a match schedule, and
-    stores the results of the games. The back-end database is a Google
-    Sheet, allowing inputs from multiple devices and displaying the same
-    data across various devices.
+-   Latest side project is a [Petanque Liga
+    website](https://theoblauberg.shinyapps.io/petanque_liga/) which
+    generates a match schedule, and stores the results of the games. The
+    back-end is powered by a Google Sheet, enabling seamless input from
+    multiple devices while ensuring consistent data display across all
+    platforms.
 
 ### ASCII Art generator
 
--   WIP A [Julia package](https://github.com/bbtheo/ImagesToAscii.jl)
-    which turns .jpg, and .png pictures to ASCII art.
+-   Currently developing a Julia package,
+    [ImagesToAscii.jl](https://github.com/bbtheo/ImagesToAscii.jl),
+    which converts .jpg and .png images into ASCII art. As part of this
+    side project, I deepened my understanding of matrix operations and
+    image processing.
 
 ## Positions of Responsibility
 
