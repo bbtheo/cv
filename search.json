@@ -4,41 +4,48 @@
     "href": "cv.html",
     "title": "Theo Blauberg",
     "section": "",
-    "text": "I am a professional with a advanced degree in Economics, and a nearly finished one in Data Science from the University of Helsinki. I have specialized in machine learning methods, particularly Bayesian ones, and also have experience in econometrics, statistics, and mathematics. I’m proficient in R, Python, and SQL, and have worked extensively on building and maintaining data pipelines, creating machine learning models, and informative data visualization.\n\n\n\n\n\n\n\n +358407181510\n\n\n theo.blauberg@outlook.com\n\n\n Github\n\n\n Linkedin"
+    "text": "Senior Analytics Engineer with an advanced degree in Economics and extensive experience in machine learning, econometrics, and data engineering. Currently completing a Master’s in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, data pipelines, and interactive data applications.\n\n\n\n\n\n\n\n +358407181510\n\n\n theo.blauberg@outlook.com\n\n\n Github\n\n\n Linkedin"
   },
   {
     "objectID": "cv.html#education",
     "href": "cv.html#education",
     "title": "Theo Blauberg",
     "section": "Education",
-    "text": "Education\n\nMaster’s Program in Data Science\nUniversity of Helsinki\n09/2021 -\n\n\nMajor: Data Science\nSpecializing in machine learning methods, with a particular emphasis on Bayesian methods.\n\n\n\nMaster’s Program in Economics\nUniversity of Helsinki\n09/2020 – 12/2022\n\n\nMajor: Economics\nMinors: Statistics, Mathematics, Computer Science\nMaster’s Thesis: Impact of Policy Shocks in the EU Emissions Trading System on Finland.\n\n\n\nExchange Program\nFudan University, Shanghai\n09/2018 – 06/2019\nStudied Chinese language, politics, and economics, and their implications for other East Asian countries.\n\n\nLanguage Course\nUniversity of Vienna\n09/2015 – 12/2015\nStrengthened German language skills through a language course."
+    "text": "Education\n\nMaster’s Program in Data Science\nUniversity of Helsinki\n09/2021 -\n\n\nMajor: Data Science\nSpecializing in machine learning methods with emphasis on GPU-accelerated computing.\nThesis: A novel approach to detecting long-running fraud patterns using sequence models.\n\n\n\nMaster’s Program in Economics\nUniversity of Helsinki\n09/2020 - 12/2022\n\n\nMajor: Economics\nMinors: Statistics, Mathematics, Computer Science\nMaster’s Thesis: Impact of Policy Shocks in the EU Emissions Trading System on Finland.\n\n\n\nExchange Program\nFudan University, Shanghai\n09/2018 - 06/2019\nStudied Chinese language, politics, and economics, with focus on East Asian economic development.\n\n\nLanguage Course\nUniversity of Vienna\n09/2015 - 12/2015\nIntensive German language studies."
+  },
+  {
+    "objectID": "cv.html#technical-skills",
+    "href": "cv.html#technical-skills",
+    "title": "Theo Blauberg",
+    "section": "Technical Skills",
+    "text": "Technical Skills\nLanguages: R, Python, SQL, Julia, C++\nML/AI: PyTorch, scikit-learn, LLMs\nData: dplyr, pandas, Arrow, RAPIDS\nWeb: Shiny, Quarto, REST APIs\nTools: Git, Docker, Linux, CUDA"
   },
   {
     "objectID": "cv.html#certifications",
     "href": "cv.html#certifications",
     "title": "Theo Blauberg",
     "section": "Certifications",
-    "text": "Certifications\n\nDataCamp Deep Learning in Python\nNVIDIA: Fundamentals of Deep Learning\nNVIDIA: Fundamentals of Accelerated Computing with CUDA Python\nDataCamp: Data Scientist with R\nDataCamp: Data Visualization with R"
+    "text": "Certifications\n\nNVIDIA: Fundamentals of Deep Learning\nNVIDIA: Fundamentals of Accelerated Computing with CUDA Python\nDataCamp: Deep Learning in Python\nDataCamp: Data Scientist with R"
   },
   {
     "objectID": "cv.html#work-experience",
     "href": "cv.html#work-experience",
     "title": "Theo Blauberg",
     "section": "Work Experience",
-    "text": "Work Experience\n\nData Analyst (GFCP Expert)\n\n\nNordea\n\n\n06/2023 -\n\n\n\nCollaborated within a team responsible for building, maintaining, and monitoring models that deliver real-time stopping power for card and account-to-account transactions.\nDeveloped and maintained an internal R package to facilitate data analysis and visualization. Additionally, spearheaded the establishment of a Data & Analytics community within the department.\n\n\n\nData Analyst\n\n\nVATT Data Room\n\n\n08/2022 – 07/2023\n\n\n\n\nI was responsible for conducting analyses and co-authoring reports on electricity market data, with a particular focus on consumer and company responses to price shocks.\nDesigned and developed a Shiny app-based web page to showcase research results, enabling interactive data visualization and enhancing the communication of findings to stakeholders.\n\n\n\nProject Worker\n\n\nCity of Tampere\n\n\n05/2022 – 08/2022\n\n\n\nI was responsible for data analysis in a joint research project by the City of Tampere, the University of Helsinki, and VATT. Responsibilities included preparing raw data for researchers and integrating external data sources. The data was then further utilized in a working paper.\n\n\n\nIntern\n\n\nEmbassy of Finland in Vienna\n\n\n\n05/2021 – 08/2021\n\n\n\n\nMonitored and reported on the Austrian economic situation as part of my role at the Finnish Embassy, delivering valuable insights into economic trends and developments to inform policy decisions for the Finnish Government.\nAttended and provided detailed reports on meetings with UN organizations and local politicians, ensuring comprehensive coverage of diplomatic and political engagements."
+    "text": "Work Experience\n\nSenior Analytics Engineer\n\n\nNordea\n\n\n07/2025 -\n\n\n\nBuild, maintain, and monitor machine learning models that deliver real-time fraud detection for card and account-to-account transactions.\nLead analytics initiatives with increased autonomy in model development and deployment decisions.\nMaintain an internal R package for data analysis and visualization, significantly improving team productivity.\n\n\n\nData Analyst\n\n\nNordea\n\n\n07/2023 - 07/2025\n\n\n\nCollaborated within a team responsible for building and monitoring real-time fraud detection models.\nDeveloped internal tooling and established a Data & Analytics community within the department.\n\n\n\nData Analyst\n\n\nVATT Institute for Economic Research\n\n\n01/2023 - 06/2023\n\n\n\nConducted analyses and co-authored research reports on electricity market data, focusing on consumer and company responses to price shocks.\nDesigned and developed a Shiny-based dashboard for interactive data visualization.\n\n\n\nResearch Assistant\n\n\nVATT Institute for Economic Research\n\n\n08/2022 - 01/2023\n\n\n\nSupported research projects with data preparation, analysis, and visualization tasks.\n\n\n\nProject Worker\n\n\nCity of Tampere\n\n\n05/2022 - 08/2022\n\n\n\nWorked on the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla), responsible for data analysis and visualization using the mobility carbon footprint calculator from the Tampere.Finland app.\nProject co-funded by the Ministry of the Environment. Results published in a working paper.\n\n\n\nIntern\n\n\nEmbassy of Finland in Vienna\n\n\n05/2021 - 08/2021\n\n\n\nMonitored and reported on Austrian economic developments to inform Finnish Government policy decisions.\nAttended and reported on meetings with UN organizations and local politicians."
   },
   {
-    "objectID": "cv.html#side-projects",
-    "href": "cv.html#side-projects",
+    "objectID": "cv.html#projects",
+    "href": "cv.html#projects",
     "title": "Theo Blauberg",
-    "section": "Side projects",
-    "text": "Side projects\n\nPetanque liga website\n\nLatest side project is a Petanque Liga website which generates a match schedule, and stores the results of the games. The back-end is powered by a Google Sheet, enabling seamless input from multiple devices while ensuring consistent data display across all platforms.\n\n\n\nASCII Art generator\n\nCurrently developing a Julia package, ImagesToAscii.jl, which converts .jpg and .png images into ASCII art. As part of this side project, I deepened my understanding of matrix operations and image processing."
+    "section": "Projects",
+    "text": "Projects\n\ncuplr - GPU-Accelerated dplyr\n\nDeveloping an R package that provides a GPU-accelerated dplyr backend via RAPIDS libcudf, achieving 30-50x performance improvements on large datasets.\nImplements zero-copy data transfer using Arrow C Data Interface and custom Rcpp bindings.\nGitHub\n\n\n\nReseptor - AI Recipe Assistant\n\nBuilt a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.\nFeatures markdown output for easy recipe sharing and distribution.\nGitHub\n\n\n\nPetanque Liga\n\nBuilt a tournament management website with automatic match scheduling and result tracking.\nBackend powered by Google Sheets for multi-device data entry.\n\n\n\nImagesToAscii.jl\n\nDeveloping a Julia package for converting images to ASCII art, exploring matrix operations and image processing."
   },
   {
     "objectID": "cv.html#positions-of-responsibility",
     "href": "cv.html#positions-of-responsibility",
     "title": "Theo Blauberg",
     "section": "Positions of Responsibility",
-    "text": "Positions of Responsibility\n\nVote Counter\nAuthorized by the group of Western countries to serve as a vote counter in the Secretary-General Election of the United Nations Industrial Development Organization.\n\n\nBoard Member\nActively served as a board member of the Economics Students’ Association, contributing to the organization’s strategic planning and activities."
+    "text": "Positions of Responsibility\n\nVote Counter - UNIDO\nAuthorized by the Western countries group to serve as vote counter in the Secretary-General Election of the United Nations Industrial Development Organization.\n\n\nBoard Member - Economics Students’ Association\nServed on the board contributing to strategic planning and student activities."
   }
 ]
