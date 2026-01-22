@@ -1,19 +1,45 @@
 /*-- scss:defaults --*/
 $body-bg: lighten(#c9beaa, 14%);
-$headings-font-colour: #3f5465;
+$body-color: #2d3748;
+$headings-color: #3f5465;
 $link-color: #3f5465;
-$h2-font-size:          1.6rem !default;
-$headings-font-weight:  500 !default;
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.4rem;
+$h3-font-size: 1.1rem;
+$headings-font-weight: 600;
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
 /*-- scss:rules --*/
 
-h1, h2, h3 {
-  
-  color: #3f5465;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
-  
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
 }
 
-h4, h5, h6 {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+h1 {
+  color: #1a202c;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  color: $headings-color;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+h3 {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+strong {
+  color: #1a202c;
+}
+
+/* Accent color for icons */
+.fa-solid, .fa-brands {
+  color: $link-color;
 }
