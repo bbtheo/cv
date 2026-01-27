@@ -70,10 +70,9 @@ Intensive German language studies.
 ## Technical Skills
 
 **Languages:** R, Python, SQL, Julia, C++  
-**ML/AI:** PyTorch, scikit-learn, LLMs  
-**Data:** dplyr, pandas, Arrow, RAPIDS  
+**ML/AI:** Torch, tidymodels, scikit-learn, LLMs  
+**Data:** dplyr, DuckDB, pandas, Arrow  
 **Web:** Shiny, Quarto, REST APIs  
-**Tools:** Git, Docker, Linux, CUDA
 
 ## Certifications
 
@@ -161,14 +160,14 @@ Intensive German language studies.
 
 ## Projects
 
-### cuplr - GPU-Accelerated dplyr
+### cuplyr - GPU-Accelerated dplyr
 
 -   Developing an R package that provides a GPU-accelerated dplyr
     backend via RAPIDS libcudf, achieving 30-50x performance
     improvements on large datasets.
 -   Implements zero-copy data transfer using Arrow C Data Interface and
     custom Rcpp bindings.
--   [GitHub](https://github.com/bbtheo/cuplr)
+-   [GitHub](https://github.com/bbtheo/cuplyr)
 
 ### Reseptor - AI Recipe Assistant
 

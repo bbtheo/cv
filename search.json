@@ -18,7 +18,7 @@
     "href": "cv.html#technical-skills",
     "title": "Theo Blauberg",
     "section": "Technical Skills",
-    "text": "Technical Skills\nLanguages: R, Python, SQL, Julia, C++\nML/AI: PyTorch, scikit-learn, LLMs\nData: dplyr, pandas, Arrow, RAPIDS\nWeb: Shiny, Quarto, REST APIs\nTools: Git, Docker, Linux, CUDA"
+    "text": "Technical Skills\nLanguages: R, Python, SQL, Julia, C++\nML/AI: Torch, tidymodels, scikit-learn, LLMs\nData: dplyr, DuckDB, pandas, Arrow\nWeb: Shiny, Quarto, REST APIs"
   },
   {
     "objectID": "cv.html#certifications",
@@ -39,7 +39,7 @@
     "href": "cv.html#projects",
     "title": "Theo Blauberg",
     "section": "Projects",
-    "text": "Projects\n\ncuplr - GPU-Accelerated dplyr\n\nDeveloping an R package that provides a GPU-accelerated dplyr backend via RAPIDS libcudf, achieving 30-50x performance improvements on large datasets.\nImplements zero-copy data transfer using Arrow C Data Interface and custom Rcpp bindings.\nGitHub\n\n\n\nReseptor - AI Recipe Assistant\n\nBuilt a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.\nFeatures markdown output for easy recipe sharing and distribution.\nGitHub\n\n\n\nPetanque Liga\n\nBuilt a tournament management website with automatic match scheduling and result tracking.\nBackend powered by Google Sheets for multi-device data entry.\n\n\n\nImagesToAscii.jl\n\nDeveloping a Julia package for converting images to ASCII art, exploring matrix operations and image processing."
+    "text": "Projects\n\ncuplyr - GPU-Accelerated dplyr\n\nDeveloping an R package that provides a GPU-accelerated dplyr backend via RAPIDS libcudf, achieving 30-50x performance improvements on large datasets.\nImplements zero-copy data transfer using Arrow C Data Interface and custom Rcpp bindings.\nGitHub\n\n\n\nReseptor - AI Recipe Assistant\n\nBuilt a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.\nFeatures markdown output for easy recipe sharing and distribution.\nGitHub\n\n\n\nPetanque Liga\n\nBuilt a tournament management website with automatic match scheduling and result tracking.\nBackend powered by Google Sheets for multi-device data entry.\n\n\n\nImagesToAscii.jl\n\nDeveloping a Julia package for converting images to ASCII art, exploring matrix operations and image processing."
   },
   {
     "objectID": "cv.html#positions-of-responsibility",
