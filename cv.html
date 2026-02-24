@@ -449,9 +449,17 @@ Intensive German language studies.</p>
 <section id="cuplyr---gpu-accelerated-dplyr" class="level3">
 <h3 class="anchored" data-anchor-id="cuplyr---gpu-accelerated-dplyr">cuplyr - GPU-Accelerated dplyr</h3>
 <ul>
-<li>Developing an R package that provides a GPU-accelerated dplyr backend via RAPIDS libcudf, achieving 30-50x performance improvements on large datasets.</li>
-<li>Implements zero-copy data transfer using Arrow C Data Interface and custom Rcpp bindings.</li>
+<li>Developing an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.</li>
+<li>Implements lazy evaluation with automatic query optimizations, achieving 40-77x speedups over dplyr on large datasets.</li>
 <li><a href="https://github.com/bbtheo/cuplyr">GitHub</a></li>
+</ul>
+</section>
+<section id="bracketeer---tournament-management-framework" class="level3">
+<h3 class="anchored" data-anchor-id="bracketeer---tournament-management-framework">bracketeer - Tournament Management Framework</h3>
+<ul>
+<li>Developed an R package for modeling and executing tournament competitions with support for multiple formats including round-robin, Swiss system, and elimination brackets.</li>
+<li>Features a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.</li>
+<li><a href="https://github.com/bbtheo/bracketeer">GitHub</a></li>
 </ul>
 </section>
 <section id="reseptor---ai-recipe-assistant" class="level3">

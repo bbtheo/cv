@@ -162,12 +162,21 @@ Intensive German language studies.
 
 ### cuplyr - GPU-Accelerated dplyr
 
--   Developing an R package that provides a GPU-accelerated dplyr
-    backend via RAPIDS libcudf, achieving 30-50x performance
-    improvements on large datasets.
--   Implements zero-copy data transfer using Arrow C Data Interface and
-    custom Rcpp bindings.
+-   Developing an R package that enables standard dplyr code to execute
+    on GPU hardware through a RAPIDS cuDF backend.
+-   Implements lazy evaluation with automatic query optimizations,
+    achieving 40-77x speedups over dplyr on large datasets.
 -   [GitHub](https://github.com/bbtheo/cuplyr)
+
+### bracketeer - Tournament Management Framework
+
+-   Developed an R package for modeling and executing tournament
+    competitions with support for multiple formats including
+    round-robin, Swiss system, and elimination brackets.
+-   Features a pipe-first API design for defining reusable tournament
+    blueprints with automatic stage materialization and flexible result
+    entry.
+-   [GitHub](https://github.com/bbtheo/bracketeer)
 
 ### Reseptor - AI Recipe Assistant
 
