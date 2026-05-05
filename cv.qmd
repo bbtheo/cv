@@ -62,7 +62,7 @@ format-links:
 ::: {.column .header-col width="70%"}
 ### Profile
 
-Senior Analytics Engineer with an advanced degree in Economics and extensive experience in machine learning, econometrics, and data engineering. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, data pipelines, and interactive data applications.
+Senior Analytics Engineer with an advanced degree in Economics and extensive experience in econometrics, machine learning, and experimentation. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, interactive data applications, and internal analytics tooling.
 :::
 
 ::: {.column .header-col width="30%"}
@@ -129,7 +129,7 @@ Intensive German language studies.
 **Languages:** R, Python, SQL, Julia, C++\
 **ML/AI:** Torch, tidymodels, scikit-learn, LLMs\
 **Data:** dplyr, DuckDB, pandas, Arrow\
-**Web:** Shiny, Quarto, REST APIs\
+**Web:** Shiny, Quarto, PowerBI, REST APIs\
 
 ## Certifications
 
@@ -169,7 +169,7 @@ Intensive German language studies.
 ::::
 
 - Collaborated within a team responsible for building and monitoring real-time fraud detection models.
-- Developed internal tooling and established a Data & Analytics community within the department.
+- Developed internal R packages, Shiny apps, and automated reports. Established a Data & Analytics community within the department.
 
 ### Data Analyst
 
@@ -209,7 +209,7 @@ Intensive German language studies.
 :::
 ::::
 
--   Worked on the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla), responsible for data analysis and visualization using the mobility carbon footprint calculator from the Tampere.Finland app.
+-   Analysed a randomised controlled experiment (~5,000 users) testing whether information nudges could shift mobility behaviour, as part of the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla).
 -   Project co-funded by the Ministry of the Environment. Results published in a [working paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
 
 ### Intern
