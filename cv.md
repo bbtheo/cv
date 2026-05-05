@@ -4,11 +4,11 @@
 ### Profile
 
 Senior Analytics Engineer with an advanced degree in Economics and
-extensive experience in machine learning, econometrics, and data
-engineering. Currently completing a Master’s in Data Science at the
+extensive experience in econometrics, machine learning, and
+experimentation. Currently completing a Master’s in Data Science at the
 University of Helsinki. Proficient in R, Python, SQL, and GPU computing.
-Experienced in building production ML models, data pipelines, and
-interactive data applications.
+Experienced in building production ML models, interactive data
+applications, and internal analytics tooling.
 
 ### Contact
 
@@ -36,23 +36,22 @@ interactive data applications.
 **University of Helsinki**  
 09/2021 -  
 
--   **Major:** Data Science
--   Specializing in machine learning methods with emphasis on
-    GPU-accelerated computing.
--   [**Thesis:**](https://github.com/bbtheo/ds-thesis) A novel approach
-    to detecting long-running fraud patterns using sequence models.
+- **Major:** Data Science
+- Specializing in machine learning methods with emphasis on
+  GPU-accelerated computing.
+- [**Thesis:**](https://github.com/bbtheo/ds-thesis) A novel approach to
+  detecting long-running fraud patterns using sequence models.
 
 ### Master’s Program in Economics
 
 **University of Helsinki**  
 09/2020 - 12/2022  
 
--   **Major:** Economics
--   **Minors:** Statistics, Mathematics, Computer Science
--   [**Master’s
-    Thesis:**](https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf)
-    Impact of Policy Shocks in the EU Emissions Trading System on
-    Finland.
+- **Major:** Economics
+- **Minors:** Statistics, Mathematics, Computer Science
+- [**Master’s
+  Thesis:**](https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf)
+  Impact of Policy Shocks in the EU Emissions Trading System on Finland.
 
 ### Exchange Program
 
@@ -72,14 +71,14 @@ Intensive German language studies.
 **Languages:** R, Python, SQL, Julia, C++  
 **ML/AI:** Torch, tidymodels, scikit-learn, LLMs  
 **Data:** dplyr, DuckDB, pandas, Arrow  
-**Web:** Shiny, Quarto, REST APIs  
+**Web:** Shiny, Quarto, PowerBI, REST APIs  
 
 ## Certifications
 
--   **NVIDIA:** Fundamentals of Deep Learning
--   **NVIDIA:** Fundamentals of Accelerated Computing with CUDA Python
--   **DataCamp:** Deep Learning in Python
--   **DataCamp:** Data Scientist with R
+- **NVIDIA:** Fundamentals of Deep Learning
+- **NVIDIA:** Fundamentals of Accelerated Computing with CUDA Python
+- **DataCamp:** Deep Learning in Python
+- **DataCamp:** Data Scientist with R
 
 ## Work Experience
 
@@ -89,13 +88,13 @@ Intensive German language studies.
 
 07/2025 -
 
--   Build, maintain, and monitor machine learning models that deliver
-    real-time fraud detection for card and account-to-account
-    transactions.
--   Lead analytics initiatives with increased autonomy in model
-    development and deployment decisions.
--   Maintain an internal R package for data analysis and visualization,
-    significantly improving team productivity.
+- Build, maintain, and monitor machine learning models that deliver
+  real-time fraud detection for card and account-to-account
+  transactions.
+- Lead analytics initiatives with increased autonomy in model
+  development and deployment decisions.
+- Maintain an internal R package for data analysis and visualization,
+  significantly improving team productivity.
 
 ### Data Analyst
 
@@ -103,10 +102,10 @@ Intensive German language studies.
 
 07/2023 - 07/2025
 
--   Collaborated within a team responsible for building and monitoring
-    real-time fraud detection models.
--   Developed internal tooling and established a Data & Analytics
-    community within the department.
+- Collaborated within a team responsible for building and monitoring
+  real-time fraud detection models.
+- Developed internal R packages, Shiny apps, and automated reports.
+  Established a Data & Analytics community within the department.
 
 ### Data Analyst
 
@@ -114,15 +113,15 @@ Intensive German language studies.
 
 01/2023 - 06/2023
 
--   Conducted analyses and co-authored research reports on electricity
-    market data, focusing on
-    [consumer](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:2tRrZ1ZAMYUC)
-    and
-    [company](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC)
-    responses to price shocks.
--   Designed and developed a [Shiny-based
-    dashboard](https://github.com/datahuone/shiny_app) for interactive
-    data visualization.
+- Conducted analyses and co-authored research reports on electricity
+  market data, focusing on
+  [consumer](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:2tRrZ1ZAMYUC)
+  and
+  [company](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC)
+  responses to price shocks.
+- Designed and developed a [Shiny-based
+  dashboard](https://github.com/datahuone/shiny_app) for interactive
+  data visualization.
 
 ### Research Assistant
 
@@ -130,8 +129,8 @@ Intensive German language studies.
 
 08/2022 - 01/2023
 
--   Supported research projects with data preparation, analysis, and
-    visualization tasks.
+- Supported research projects with data preparation, analysis, and
+  visualization tasks.
 
 ### Project Worker
 
@@ -139,13 +138,13 @@ Intensive German language studies.
 
 05/2022 - 08/2022
 
--   Worked on the Keli project (Kestävämmän liikkumisen kehittäminen
-    hiilijalanjälkilaskurin avulla), responsible for data analysis and
-    visualization using the mobility carbon footprint calculator from
-    the Tampere.Finland app.
--   Project co-funded by the Ministry of the Environment. Results
-    published in a [working
-    paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
+- Analysed a randomised controlled experiment (~5,000 users) testing
+  whether information nudges could shift mobility behaviour, as part of
+  the Keli project (Kestävämmän liikkumisen kehittäminen
+  hiilijalanjälkilaskurin avulla).
+- Project co-funded by the Ministry of the Environment. Results
+  published in a [working
+  paper](https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC).
 
 ### Intern
 
@@ -153,51 +152,50 @@ Intensive German language studies.
 
 05/2021 - 08/2021
 
--   Monitored and reported on Austrian economic developments to inform
-    Finnish Government policy decisions.
--   Attended and reported on meetings with UN organizations and local
-    politicians.
+- Monitored and reported on Austrian economic developments to inform
+  Finnish Government policy decisions.
+- Attended and reported on meetings with UN organizations and local
+  politicians.
 
 ## Projects
 
 ### cuplyr - GPU-Accelerated dplyr
 
--   Developing an R package that enables standard dplyr code to execute
-    on GPU hardware through a RAPIDS cuDF backend.
--   Implements lazy evaluation with automatic query optimizations,
-    achieving 40-77x speedups over dplyr on large datasets.
--   [GitHub](https://github.com/bbtheo/cuplyr)
+- Developing an R package that enables standard dplyr code to execute on
+  GPU hardware through a RAPIDS cuDF backend.
+- Implements lazy evaluation with automatic query optimizations,
+  achieving 40-77x speedups over dplyr on large datasets.
+- [GitHub](https://github.com/bbtheo/cuplyr)
 
 ### bracketeer - Tournament Management Framework
 
--   Developed an R package for modeling and executing tournament
-    competitions with support for multiple formats including
-    round-robin, Swiss system, and elimination brackets.
--   Features a pipe-first API design for defining reusable tournament
-    blueprints with automatic stage materialization and flexible result
-    entry.
--   [GitHub](https://github.com/bbtheo/bracketeer)
+- Developed an R package for modeling and executing tournament
+  competitions with support for multiple formats including round-robin,
+  Swiss system, and elimination brackets.
+- Features a pipe-first API design for defining reusable tournament
+  blueprints with automatic stage materialization and flexible result
+  entry.
+- [GitHub](https://github.com/bbtheo/bracketeer)
 
 ### Reseptor - AI Recipe Assistant
 
--   Built a web application for interactive recipe creation using Python
-    Shiny and Claude API integration via Chatlas.
--   Features markdown output for easy recipe sharing and distribution.
--   [GitHub](https://github.com/bbtheo/reseptor)
+- Built a web application for interactive recipe creation using Python
+  Shiny and Claude API integration via Chatlas.
+- Features markdown output for easy recipe sharing and distribution.
+- [GitHub](https://github.com/bbtheo/reseptor)
 
 ### Petanque Liga
 
--   Built a [tournament management
-    website](https://theoblauberg.shinyapps.io/petanque_liga/) with
-    automatic match scheduling and result tracking.
--   Backend powered by Google Sheets for multi-device data entry.
+- Built a [tournament management
+  website](https://theoblauberg.shinyapps.io/petanque_liga/) with
+  automatic match scheduling and result tracking.
+- Backend powered by Google Sheets for multi-device data entry.
 
 ### ImagesToAscii.jl
 
--   Developing a [Julia
-    package](https://github.com/bbtheo/ImagesToAscii.jl) for converting
-    images to ASCII art, exploring matrix operations and image
-    processing.
+- Developing a [Julia
+  package](https://github.com/bbtheo/ImagesToAscii.jl) for converting
+  images to ASCII art, exploring matrix operations and image processing.
 
 ## Positions of Responsibility
 
