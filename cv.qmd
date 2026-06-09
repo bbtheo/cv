@@ -240,6 +240,12 @@ Intensive German language studies.
 - Features a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.
 - [GitHub](https://github.com/bbtheo/bracketeer)
 
+### digitraffic - Finntraffic API Client
+
+- Building an R package that provides tidy access to Finland's Digitraffic road traffic API, covering 450+ measurement stations with real-time speed, volume, and classification data.
+- Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. To be submitted to CRAN.
+- [GitHub](https://github.com/bbtheo/digitraffic)
+
 ### Reseptor - AI Recipe Assistant
 
 - Built a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.
