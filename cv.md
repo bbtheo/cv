@@ -39,8 +39,9 @@ applications, and internal analytics tooling.
 - **Major:** Data Science
 - Specializing in machine learning methods with emphasis on
   GPU-accelerated computing.
-- [**Thesis:**](https://github.com/bbtheo/ds-thesis) A novel approach to
-  detecting long-running fraud patterns using sequence models.
+- [**Thesis:**](https://github.com/bbtheo/ds-thesis) Applying tabular
+  foundation models (TabPFN) to the detection of fraud patterns in
+  high-dimensional transaction data.
 
 ### Master’s Program in Economics
 
@@ -176,6 +177,15 @@ Intensive German language studies.
   blueprints with automatic stage materialization and flexible result
   entry.
 - [GitHub](https://github.com/bbtheo/bracketeer)
+
+### digitraffic - Finntraffic API Client
+
+- Building an R package that provides tidy access to Finland’s
+  Digitraffic road traffic API, covering 450+ measurement stations with
+  real-time speed, volume, and classification data.
+- Features tidyverse-native output, spatial filtering, built-in caching,
+  and rate limiting. To be submitted to CRAN.
+- [GitHub](https://github.com/bbtheo/digitraffic)
 
 ### Reseptor - AI Recipe Assistant
 
