@@ -40,7 +40,7 @@ applications, and internal analytics tooling.
 - Specializing in machine learning methods with emphasis on
   GPU-accelerated computing.
 - [**Thesis:**](https://github.com/bbtheo/ds-thesis) Applying tabular
-  foundation models (TabPFN) to the detection of fraud patterns in
+  foundation models to the detection of fraud patterns in
   high-dimensional transaction data.
 
 ### Master’s Program in Economics
