@@ -41,7 +41,8 @@ applications, and internal analytics tooling.
   GPU-accelerated computing.
 - [**Thesis:**](https://github.com/bbtheo/ds-thesis) Applying tabular
   foundation models to the detection of fraud patterns in
-  high-dimensional transaction data.
+  high-dimensional transaction data. Work in progress; [current
+  draft](https://bbtheo.github.io/ds-thesis/).
 
 ### Master’s Program in Economics
 
