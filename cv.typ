@@ -1,8 +1,38 @@
+// Simple numbering for non-book documents
+#let equation-numbering = "(1)"
+#let callout-numbering = "1"
+#let subfloat-numbering(n-super, subfloat-idx) = {
+  numbering("1a", n-super, subfloat-idx)
+}
+
+// Theorem configuration for theorion
+// Simple numbering for non-book documents (no heading inheritance)
+#let theorem-inherited-levels = 0
+
+// Theorem numbering format (can be overridden by extensions for appendix support)
+// This function returns the numbering pattern to use
+#let theorem-numbering(loc) = "1.1"
+
+// Default theorem render function
+#let theorem-render(prefix: none, title: "", full-title: auto, body) = {
+  if full-title != "" and full-title != auto and full-title != none {
+    strong[#full-title.]
+    h(0.5em)
+  }
+  body
+}
 // Some definitions presupposed by pandoc's typst output.
-#let blockquote(body) = [
-  #set text( size: 0.92em )
-  #block(inset: (left: 1.5em, top: 0.2em, bottom: 0.2em))[#body]
-]
+#let content-to-string(content) = {
+  if content.has("text") {
+    content.text
+  } else if content.has("children") {
+    content.children.map(content-to-string).join("")
+  } else if content.has("body") {
+    content-to-string(content.body)
+  } else if content == [ ] {
+    " "
+  }
+}
 
 #let horizontalrule = line(start: (25%,0%), end: (75%,0%))
 
@@ -10,14 +40,10 @@
   #stack(dir: ltr, spacing: 3pt, super[#num], contents)
 ]
 
-#show terms: it => {
-  it.children
-    .map(child => [
-      #strong[#child.term]
-      #block(inset: (left: 1.5em, top: -0.4em))[#child.description]
-      ])
-    .join()
-}
+#show terms.item: it => block(breakable: false)[
+  #text(weight: "bold")[#it.term]
+  #block(inset: (left: 1.5em, top: -0.4em))[#it.description]
+]
 
 // Some quarto-specific definitions.
 
@@ -29,15 +55,14 @@
   )
 
 #let block_with_new_content(old_block, new_content) = {
-  let d = (:)
   let fields = old_block.fields()
-  fields.remove("body")
+  let _ = fields.remove("body")
   if fields.at("below", default: none) != none {
     // TODO: this is a hack because below is a "synthesized element"
     // according to the experts in the typst discord...
     fields.below = fields.below.abs
   }
-  return block.with(..fields)(new_content)
+  block.with(..fields)(new_content)
 }
 
 #let empty(v) = {
@@ -69,7 +94,6 @@
   label: none,
   supplement: str,
   position: none,
-  subrefnumbering: "1a",
   subcapnumbering: "(a)",
   body,
 ) = {
@@ -82,16 +106,19 @@
       supplement: supplement,
       caption: caption,
       {
-        show figure.where(kind: kind): set figure(numbering: _ => numbering(subrefnumbering, n-super, quartosubfloatcounter.get().first() + 1))
+        show figure.where(kind: kind): set figure(numbering: _ => {
+          let subfloat-idx = quartosubfloatcounter.get().first() + 1
+          subfloat-numbering(n-super, subfloat-idx)
+        })
         show figure.where(kind: kind): set figure.caption(position: position)
 
         show figure: it => {
           let num = numbering(subcapnumbering, n-super, quartosubfloatcounter.get().first() + 1)
-          show figure.caption: it => {
+          show figure.caption: it => block({
             num.slice(2) // I don't understand why the numbering contains output that it really shouldn't, but this fixes it shrug?
             [ ]
             it.body
-          }
+          })
 
           quartosubfloatcounter.step()
           it
@@ -122,26 +149,36 @@
   // when we cleanup pandoc's emitted code to avoid spaces this will have to change
   let old_callout = it.body.children.at(1).body.children.at(1)
   let old_title_block = old_callout.body.children.at(0)
-  let old_title = old_title_block.body.body.children.at(2)
+  let children = old_title_block.body.body.children
+  let old_title = if children.len() == 1 {
+    children.at(0)  // no icon: title at index 0
+  } else {
+    children.at(1)  // with icon: title at index 1
+  }
 
   // TODO use custom separator if available
+  // Use the figure's counter display which handles chapter-based numbering
+  // (when numbering is a function that includes the heading counter)
+  let callout_num = it.counter.display(it.numbering)
   let new_title = if empty(old_title) {
-    [#kind #it.counter.display()]
+    [#kind #callout_num]
   } else {
-    [#kind #it.counter.display(): #old_title]
+    [#kind #callout_num: #old_title]
   }
 
   let new_title_block = block_with_new_content(
-    old_title_block, 
+    old_title_block,
     block_with_new_content(
-      old_title_block.body, 
-      old_title_block.body.body.children.at(0) +
-      old_title_block.body.body.children.at(1) +
-      new_title))
+      old_title_block.body,
+      if children.len() == 1 {
+        new_title  // no icon: just the title
+      } else {
+        children.at(0) + new_title  // with icon: preserve icon block + new title
+      }))
 
-  block_with_new_content(old_callout,
+  align(left, block_with_new_content(old_callout,
     block(below: 0pt, new_title_block) +
-    old_callout.body.children.at(1))
+    old_callout.body.children.at(1)))
 }
 
 // 2023-10-09: #fa-icon("fa-info") is not working, so we'll eval "#fa-info()" instead
@@ -157,9 +194,9 @@
       width: 100%, 
       below: 0pt, 
       block(
-        fill: background_color, 
-        width: 100%, 
-        inset: 8pt)[#text(icon_color, weight: 900)[#icon] #title]) +
+        fill: background_color,
+        width: 100%,
+        inset: 8pt)[#if icon != none [#text(icon_color, weight: 900)[#icon] ]#title]) +
       if(body != []){
         block(
           inset: 1pt, 
@@ -171,94 +208,126 @@
 
 
 
+
 #let article(
   title: none,
   subtitle: none,
   authors: none,
+  keywords: (),
   date: none,
-  abstract: none,
   abstract-title: none,
+  abstract: none,
+  thanks: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
-  paper: "us-letter",
   lang: "en",
   region: "US",
-  font: "libertinus serif",
+  font: none,
   fontsize: 11pt,
   title-size: 1.5em,
   subtitle-size: 1.25em,
-  heading-family: "libertinus serif",
+  heading-family: none,
   heading-weight: "bold",
   heading-style: "normal",
   heading-color: black,
   heading-line-height: 0.65em,
+  mathfont: none,
+  codefont: none,
+  linestretch: 1,
   sectionnumbering: none,
-  pagenumbering: "1",
+  linkcolor: none,
+  citecolor: none,
+  filecolor: none,
   toc: false,
   toc_title: none,
   toc_depth: none,
   toc_indent: 1.5em,
   doc,
 ) = {
-  set page(
-    paper: paper,
-    margin: margin,
-    numbering: pagenumbering,
+  // Set document metadata for PDF accessibility
+  set document(title: title, keywords: keywords)
+  set document(
+    author: authors.map(author => content-to-string(author.name)).join(", ", last: " & "),
+  ) if authors != none and authors != ()
+  set par(
+    justify: true,
+    leading: linestretch * 0.65em
   )
-  set par(justify: true)
   set text(lang: lang,
            region: region,
-           font: font,
            size: fontsize)
+  set text(font: font) if font != none
+  show math.equation: set text(font: mathfont) if mathfont != none
+  show raw: set text(font: codefont) if codefont != none
+
   set heading(numbering: sectionnumbering)
-  if title != none {
-    align(center)[#block(inset: 2em)[
-      #set par(leading: heading-line-height)
-      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-           or heading-color != black or heading-decoration == "underline"
-           or heading-background-color != none) {
-        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
-        text(size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(size: subtitle-size)[#subtitle]
-        }
-      } else {
-        text(weight: "bold", size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(weight: "bold", size: subtitle-size)[#subtitle]
-        }
-      }
-    ]]
-  }
 
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
+  show link: set text(fill: rgb(content-to-string(linkcolor))) if linkcolor != none
+  show ref: set text(fill: rgb(content-to-string(citecolor))) if citecolor != none
+  show link: this => {
+    if filecolor != none and type(this.dest) == label {
+      text(this, fill: rgb(content-to-string(filecolor)))
+    } else {
+      text(this)
+    }
+   }
+
+  let has-title-block = title != none or (authors != none and authors != ()) or date != none or abstract != none
+  if has-title-block {
+    place(
+      top,
+      float: true,
+      scope: "parent",
+      clearance: 4mm,
+      block(below: 1em, width: 100%)[
+
+        #if title != none {
+          align(center, block(inset: 2em)[
+            #set par(leading: heading-line-height) if heading-line-height != none
+            #set text(font: heading-family) if heading-family != none
+            #set text(weight: heading-weight)
+            #set text(style: heading-style) if heading-style != "normal"
+            #set text(fill: heading-color) if heading-color != black
+
+            #text(size: title-size)[#title #if thanks != none {
+              footnote(thanks, numbering: "*")
+              counter(footnote).update(n => n - 1)
+            }]
+            #(if subtitle != none {
+              parbreak()
+              text(size: subtitle-size)[#subtitle]
+            })
+          ])
+        }
+
+        #if authors != none and authors != () {
+          let count = authors.len()
+          let ncols = calc.min(count, 3)
+          grid(
+            columns: (1fr,) * ncols,
+            row-gutter: 1.5em,
+            ..authors.map(author =>
+                align(center)[
+                  #author.name \
+                  #author.affiliation \
+                  #author.email
+                ]
+            )
+          )
+        }
+
+        #if date != none {
+          align(center)[#block(inset: 1em)[
+            #date
+          ]]
+        }
+
+        #if abstract != none {
+          block(inset: 2em)[
+          #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
           ]
-      )
+        }
+      ]
     )
-  }
-
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
-  }
-
-  if abstract != none {
-    block(inset: 2em)[
-    #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
-    ]
   }
 
   if toc {
@@ -276,11 +345,7 @@
     ]
   }
 
-  if cols == 1 {
-    doc
-  } else {
-    columns(cols, doc)
-  }
+  doc
 }
 
 #set table(
@@ -391,16 +456,24 @@
     it.body
   )
 }
+#let brand-color = (:)
+#let brand-color-background = (:)
+#let brand-logo = (:)
+
+#set page(
+  paper: "us-letter",
+  margin: (bottom: 1.5cm,left: 2cm,right: 2cm,top: 2.2cm,),
+  numbering: "1",
+  columns: 1,
+)
 
 #show: doc => article(
   title: [Theo Blauberg],
-  margin: (bottom: 1.5cm,left: 2cm,right: 2cm,top: 2.2cm,),
   font: ("Libertinus Serif",),
   fontsize: 10pt,
-  pagenumbering: "1",
+  heading-family: ("Libertinus Serif",),
   toc_title: [Table of contents],
   toc_depth: 3,
-  cols: 1,
   doc,
 )
 // Page setup with contact header on every page
@@ -447,7 +520,7 @@
 #block[
 == Profile
 <profile>
-Senior Analytics Engineer with an advanced degree in Economics and extensive experience in machine learning, econometrics, and data engineering. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, data pipelines, and interactive data applications.
+Senior Analytics Engineer with an advanced degree in Economics and extensive experience in econometrics, machine learning, and experimentation. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, interactive data applications, and internal analytics tooling.
 
 ]
 #block[
@@ -470,7 +543,7 @@ theo.blauberg\@outlook.com
 
 - #strong[Major:] Data Science
 - Specializing in machine learning methods with emphasis on GPU-accelerated computing.
-- #link("https://github.com/bbtheo/ds-thesis")[#strong[Thesis:];] A novel approach to detecting long-running fraud patterns using sequence models.
+- #link("https://github.com/bbtheo/ds-thesis")[#strong[Thesis:]] Applying tabular foundation models to the detection of fraud patterns in high-dimensional transaction data.
 
 == Master's Program in Economics
 <masters-program-in-economics>
@@ -479,7 +552,7 @@ theo.blauberg\@outlook.com
 
 - #strong[Major:] Economics
 - #strong[Minors:] Statistics, Mathematics, Computer Science
-- #link("https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf")[#strong[Master's Thesis:];] Impact of Policy Shocks in the EU Emissions Trading System on Finland.
+- #link("https://github.com/bbtheo/gradu/blob/main/docs/bookdown-thesis.pdf")[#strong[Master's Thesis:]] Impact of Policy Shocks in the EU Emissions Trading System on Finland.
 
 == Exchange Program
 <exchange-program>
@@ -496,10 +569,9 @@ Intensive German language studies.
 = Technical Skills
 <technical-skills>
 #strong[Languages:] R, Python, SQL, Julia, C++ \
-#strong[ML/AI:] PyTorch, scikit-learn, LLMs \
-#strong[Data:] dplyr, pandas, Arrow, RAPIDS \
-#strong[Web:] Shiny, Quarto, REST APIs \
-#strong[Tools:] Git, Docker, Linux, CUDA
+#strong[ML/AI:] Torch, tidymodels, scikit-learn, LLMs \
+#strong[Data:] dplyr, DuckDB, pandas, Arrow \
+#strong[Web:] Shiny, Quarto, PowerBI, REST APIs \
 
 = Certifications
 <certifications>
@@ -541,7 +613,7 @@ Intensive German language studies.
 ]
 ]
 - Collaborated within a team responsible for building and monitoring real-time fraud detection models.
-- Developed internal tooling and established a Data & Analytics community within the department.
+- Developed internal R packages, Shiny apps, and automated reports. Established a Data & Analytics community within the department.
 
 == Data Analyst
 <data-analyst-1>
@@ -584,8 +656,8 @@ Intensive German language studies.
 
 ]
 ]
-- Worked on the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla), responsible for data analysis and visualization using the mobility carbon footprint calculator from the Tampere.Finland app.
-- Project co-funded by the Ministry of the Environment. Results published in a #link("https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC")[working paper];.
+- Analysed a randomised controlled experiment (\~5,000 users) testing whether information nudges could shift mobility behaviour, as part of the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla).
+- Project co-funded by the Ministry of the Environment. Results published in a #link("https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC")[working paper].
 
 == Intern
 <intern>
@@ -604,11 +676,23 @@ Intensive German language studies.
 
 = Projects
 <projects>
-== cuplr - GPU-Accelerated dplyr
-<cuplr---gpu-accelerated-dplyr>
-- Developing an R package that provides a GPU-accelerated dplyr backend via RAPIDS libcudf, achieving 30-50x performance improvements on large datasets.
-- Implements zero-copy data transfer using Arrow C Data Interface and custom Rcpp bindings.
-- #link("https://github.com/bbtheo/cuplr")[GitHub]
+== cuplyr - GPU-Accelerated dplyr
+<cuplyr---gpu-accelerated-dplyr>
+- Developing an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.
+- Implements lazy evaluation with automatic query optimizations, achieving 40-77x speedups over dplyr on large datasets.
+- #link("https://github.com/bbtheo/cuplyr")[GitHub]
+
+== bracketeer - Tournament Management Framework
+<bracketeer---tournament-management-framework>
+- Developed an R package for modeling and executing tournament competitions with support for multiple formats including round-robin, Swiss system, and elimination brackets.
+- Features a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.
+- #link("https://github.com/bbtheo/bracketeer")[GitHub]
+
+== digitraffic - Finntraffic API Client
+<digitraffic---finntraffic-api-client>
+- Building an R package that provides tidy access to Finland's Digitraffic road traffic API, covering 450+ measurement stations with real-time speed, volume, and classification data.
+- Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. To be submitted to CRAN.
+- #link("https://github.com/bbtheo/digitraffic")[GitHub]
 
 == Reseptor - AI Recipe Assistant
 <reseptor---ai-recipe-assistant>
@@ -637,7 +721,6 @@ Served on the board contributing to strategic planning and student activities.
 
 ]
 ]
-
 
 
 
