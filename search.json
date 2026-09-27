@@ -18,14 +18,14 @@
     "href": "cv.html#technical-skills",
     "title": "Theo Blauberg",
     "section": "Technical Skills",
-    "text": "Technical Skills\nLanguages: R, Python, SQL, Julia, C++\nML/AI: Torch, tidymodels, scikit-learn, LLMs\nData: dplyr, DuckDB, pandas, Arrow\nWeb: Shiny, Quarto, PowerBI, REST APIs"
+    "text": "Technical Skills\nLanguages: R, Python, SQL, Julia, C++\nMethods: causal inference, RCT analysis, time-series econometrics\nML/AI: Torch, tidymodels, scikit-learn, Claude Agent SDK, Anthropic Python SDK, Chatlas\nData: dplyr, DuckDB, pandas, Arrow, Spark, Hive, Impala, Snowflake\nGPU: CUDA Python, RAPIDS cuDF\nEngineering: Docker, GitHub Actions, pytest, testthat\nWeb: Shiny, Quarto, PowerBI, REST APIs"
   },
   {
     "objectID": "cv.html#certifications",
     "href": "cv.html#certifications",
     "title": "Theo Blauberg",
     "section": "Certifications",
-    "text": "Certifications\n\nNVIDIA: Fundamentals of Deep Learning\nNVIDIA: Fundamentals of Accelerated Computing with CUDA Python\nDataCamp: Deep Learning in Python\nDataCamp: Data Scientist with R"
+    "text": "Certifications\n\nNVIDIA: Fundamentals of Deep Learning\nNVIDIA: Fundamentals of Accelerated Computing with CUDA Python"
   },
   {
     "objectID": "cv.html#work-experience",
@@ -39,7 +39,7 @@
     "href": "cv.html#projects",
     "title": "Theo Blauberg",
     "section": "Projects",
-    "text": "Projects\n\ncuplyr - GPU-Accelerated dplyr\n\nDeveloping an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.\nImplements lazy evaluation with automatic query optimizations, achieving 40-77x speedups over dplyr on large datasets.\nGitHub\n\n\n\nbracketeer - Tournament Management Framework\n\nDeveloped an R package for modeling and executing tournament competitions with support for multiple formats including round-robin, Swiss system, and elimination brackets.\nFeatures a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.\nGitHub\n\n\n\ndigitraffic - Finntraffic API Client\n\nBuilding an R package that provides tidy access to Finland’s Digitraffic road traffic API, covering 450+ measurement stations with real-time speed, volume, and classification data.\nFeatures tidyverse-native output, spatial filtering, built-in caching, and rate limiting. To be submitted to CRAN.\nGitHub\n\n\n\nReseptor - AI Recipe Assistant\n\nBuilt a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.\nFeatures markdown output for easy recipe sharing and distribution.\nGitHub\n\n\n\nPetanque Liga\n\nBuilt a tournament management website with automatic match scheduling and result tracking.\nBackend powered by Google Sheets for multi-device data entry.\n\n\n\nImagesToAscii.jl\n\nDeveloping a Julia package for converting images to ASCII art, exploring matrix operations and image processing."
+    "text": "Projects\n\nRunning Coach - Self-Hosted Training Planner\n\nBuilding a self-hosted running coach that ingests Apple Health data into a canonical activity and vitals schema, maintains fitness and injury-load ledgers, and generates weekly plans from a deterministic guardrail engine.\nA Claude Agent SDK reviewer proposes plan changes that are validated against the guardrails before application. Python, FastAPI, SQLite, Docker; deployed on a home server behind Tailscale with pytest coverage across the engine.\n\n\n\ncuplyr - GPU-Accelerated dplyr\n\nDeveloping an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.\nImplements lazy evaluation with automatic query optimizations. Benchmarks show 40-77x speedups over dplyr on GPU-resident data; parity end-to-end including transfer.\nGitHub\n\n\n\ndigitraffic - Fintraffic API Client\n\nBuilding an R package for Finland’s Digitraffic road traffic sensor time series: 450+ roadside sensors, per-vehicle records, real-time and historical.\nFeatures tidyverse-native output, spatial filtering, built-in caching, and rate limiting. Tested with GitHub Actions; to be submitted to CRAN.\nGitHub\n\n\n\nbracketeer - Tournament Management Framework\n\nDeveloped an R package for modeling and executing tournament competitions with support for multiple formats including round-robin, Swiss system, and elimination brackets.\nFeatures a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.\nGitHub\n\n\n\nReseptor - Recipe Assistant\n\nPython Shiny app for interactive recipe creation on the Claude API via Chatlas."
   },
   {
     "objectID": "cv.html#positions-of-responsibility",

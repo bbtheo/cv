@@ -71,16 +71,18 @@ Intensive German language studies.
 ## Technical Skills
 
 **Languages:** R, Python, SQL, Julia, C++  
-**ML/AI:** Torch, tidymodels, scikit-learn, LLMs  
-**Data:** dplyr, DuckDB, pandas, Arrow  
+**Methods:** causal inference, RCT analysis, time-series econometrics  
+**ML/AI:** Torch, tidymodels, scikit-learn, Claude Agent SDK, Anthropic
+Python SDK, Chatlas  
+**Data:** dplyr, DuckDB, pandas, Arrow, Spark, Hive, Impala, Snowflake  
+**GPU:** CUDA Python, RAPIDS cuDF  
+**Engineering:** Docker, GitHub Actions, pytest, testthat  
 **Web:** Shiny, Quarto, PowerBI, REST APIs  
 
 ## Certifications
 
 - **NVIDIA:** Fundamentals of Deep Learning
 - **NVIDIA:** Fundamentals of Accelerated Computing with CUDA Python
-- **DataCamp:** Deep Learning in Python
-- **DataCamp:** Data Scientist with R
 
 ## Work Experience
 
@@ -161,13 +163,35 @@ Intensive German language studies.
 
 ## Projects
 
+### Running Coach - Self-Hosted Training Planner
+
+- Building a self-hosted running coach that ingests Apple Health data
+  into a canonical activity and vitals schema, maintains fitness and
+  injury-load ledgers, and generates weekly plans from a deterministic
+  guardrail engine.
+- A Claude Agent SDK reviewer proposes plan changes that are validated
+  against the guardrails before application. Python, FastAPI, SQLite,
+  Docker; deployed on a home server behind Tailscale with pytest
+  coverage across the engine.
+
 ### cuplyr - GPU-Accelerated dplyr
 
 - Developing an R package that enables standard dplyr code to execute on
   GPU hardware through a RAPIDS cuDF backend.
-- Implements lazy evaluation with automatic query optimizations,
-  achieving 40-77x speedups over dplyr on large datasets.
+- Implements lazy evaluation with automatic query optimizations.
+  Benchmarks show 40-77x speedups over dplyr on GPU-resident data;
+  parity end-to-end including transfer.
 - [GitHub](https://github.com/bbtheo/cuplyr)
+
+### digitraffic - Fintraffic API Client
+
+- Building an R package for Finland’s Digitraffic road traffic sensor
+  time series: 450+ roadside sensors, per-vehicle records, real-time and
+  historical.
+- Features tidyverse-native output, spatial filtering, built-in caching,
+  and rate limiting. Tested with GitHub Actions; to be submitted to
+  CRAN.
+- [GitHub](https://github.com/bbtheo/digitraffic)
 
 ### bracketeer - Tournament Management Framework
 
@@ -179,34 +203,10 @@ Intensive German language studies.
   entry.
 - [GitHub](https://github.com/bbtheo/bracketeer)
 
-### digitraffic - Finntraffic API Client
+### Reseptor - Recipe Assistant
 
-- Building an R package that provides tidy access to Finland’s
-  Digitraffic road traffic API, covering 450+ measurement stations with
-  real-time speed, volume, and classification data.
-- Features tidyverse-native output, spatial filtering, built-in caching,
-  and rate limiting. To be submitted to CRAN.
-- [GitHub](https://github.com/bbtheo/digitraffic)
-
-### Reseptor - AI Recipe Assistant
-
-- Built a web application for interactive recipe creation using Python
-  Shiny and Claude API integration via Chatlas.
-- Features markdown output for easy recipe sharing and distribution.
-- [GitHub](https://github.com/bbtheo/reseptor)
-
-### Petanque Liga
-
-- Built a [tournament management
-  website](https://theoblauberg.shinyapps.io/petanque_liga/) with
-  automatic match scheduling and result tracking.
-- Backend powered by Google Sheets for multi-device data entry.
-
-### ImagesToAscii.jl
-
-- Developing a [Julia
-  package](https://github.com/bbtheo/ImagesToAscii.jl) for converting
-  images to ASCII art, exploring matrix operations and image processing.
+- [Python Shiny app](https://github.com/bbtheo/reseptor) for interactive
+  recipe creation on the Claude API via Chatlas.
 
 ## Positions of Responsibility
 

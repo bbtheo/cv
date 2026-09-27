@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-198b14254a15dbb144bda09046cbec05.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fb520826b2679550a32403f91101b2aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-382b9cbf70a7ed15d68c22248c59ba62.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e5d4e9ea454d828a31527fb4786b183e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -341,8 +341,11 @@ Intensive German language studies.</p>
 <section id="technical-skills" class="level2">
 <h2 class="anchored" data-anchor-id="technical-skills">Technical Skills</h2>
 <p><strong>Languages:</strong> R, Python, SQL, Julia, C++<br>
-<strong>ML/AI:</strong> Torch, tidymodels, scikit-learn, LLMs<br>
-<strong>Data:</strong> dplyr, DuckDB, pandas, Arrow<br>
+<strong>Methods:</strong> causal inference, RCT analysis, time-series econometrics<br>
+<strong>ML/AI:</strong> Torch, tidymodels, scikit-learn, Claude Agent SDK, Anthropic Python SDK, Chatlas<br>
+<strong>Data:</strong> dplyr, DuckDB, pandas, Arrow, Spark, Hive, Impala, Snowflake<br>
+<strong>GPU:</strong> CUDA Python, RAPIDS cuDF<br>
+<strong>Engineering:</strong> Docker, GitHub Actions, pytest, testthat<br>
 <strong>Web:</strong> Shiny, Quarto, PowerBI, REST APIs<br>
 </p>
 </section>
@@ -351,8 +354,6 @@ Intensive German language studies.</p>
 <ul>
 <li><strong>NVIDIA:</strong> Fundamentals of Deep Learning</li>
 <li><strong>NVIDIA:</strong> Fundamentals of Accelerated Computing with CUDA Python</li>
-<li><strong>DataCamp:</strong> Deep Learning in Python</li>
-<li><strong>DataCamp:</strong> Data Scientist with R</li>
 </ul>
 </section>
 </div><div class="column main-col" style="width:70%;">
@@ -451,12 +452,27 @@ Intensive German language studies.</p>
 </section>
 <section id="projects" class="level2">
 <h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<section id="running-coach---self-hosted-training-planner" class="level3">
+<h3 class="anchored" data-anchor-id="running-coach---self-hosted-training-planner">Running Coach - Self-Hosted Training Planner</h3>
+<ul>
+<li>Building a self-hosted running coach that ingests Apple Health data into a canonical activity and vitals schema, maintains fitness and injury-load ledgers, and generates weekly plans from a deterministic guardrail engine.</li>
+<li>A Claude Agent SDK reviewer proposes plan changes that are validated against the guardrails before application. Python, FastAPI, SQLite, Docker; deployed on a home server behind Tailscale with pytest coverage across the engine.</li>
+</ul>
+</section>
 <section id="cuplyr---gpu-accelerated-dplyr" class="level3">
 <h3 class="anchored" data-anchor-id="cuplyr---gpu-accelerated-dplyr">cuplyr - GPU-Accelerated dplyr</h3>
 <ul>
 <li>Developing an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.</li>
-<li>Implements lazy evaluation with automatic query optimizations, achieving 40-77x speedups over dplyr on large datasets.</li>
+<li>Implements lazy evaluation with automatic query optimizations. Benchmarks show 40-77x speedups over dplyr on GPU-resident data; parity end-to-end including transfer.</li>
 <li><a href="https://github.com/bbtheo/cuplyr">GitHub</a></li>
+</ul>
+</section>
+<section id="digitraffic---fintraffic-api-client" class="level3">
+<h3 class="anchored" data-anchor-id="digitraffic---fintraffic-api-client">digitraffic - Fintraffic API Client</h3>
+<ul>
+<li>Building an R package for Finland’s Digitraffic road traffic sensor time series: 450+ roadside sensors, per-vehicle records, real-time and historical.</li>
+<li>Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. Tested with GitHub Actions; to be submitted to CRAN.</li>
+<li><a href="https://github.com/bbtheo/digitraffic">GitHub</a></li>
 </ul>
 </section>
 <section id="bracketeer---tournament-management-framework" class="level3">
@@ -467,33 +483,10 @@ Intensive German language studies.</p>
 <li><a href="https://github.com/bbtheo/bracketeer">GitHub</a></li>
 </ul>
 </section>
-<section id="digitraffic---finntraffic-api-client" class="level3">
-<h3 class="anchored" data-anchor-id="digitraffic---finntraffic-api-client">digitraffic - Finntraffic API Client</h3>
+<section id="reseptor---recipe-assistant" class="level3">
+<h3 class="anchored" data-anchor-id="reseptor---recipe-assistant">Reseptor - Recipe Assistant</h3>
 <ul>
-<li>Building an R package that provides tidy access to Finland’s Digitraffic road traffic API, covering 450+ measurement stations with real-time speed, volume, and classification data.</li>
-<li>Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. To be submitted to CRAN.</li>
-<li><a href="https://github.com/bbtheo/digitraffic">GitHub</a></li>
-</ul>
-</section>
-<section id="reseptor---ai-recipe-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="reseptor---ai-recipe-assistant">Reseptor - AI Recipe Assistant</h3>
-<ul>
-<li>Built a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.</li>
-<li>Features markdown output for easy recipe sharing and distribution.</li>
-<li><a href="https://github.com/bbtheo/reseptor">GitHub</a></li>
-</ul>
-</section>
-<section id="petanque-liga" class="level3">
-<h3 class="anchored" data-anchor-id="petanque-liga">Petanque Liga</h3>
-<ul>
-<li>Built a <a href="https://theoblauberg.shinyapps.io/petanque_liga/">tournament management website</a> with automatic match scheduling and result tracking.</li>
-<li>Backend powered by Google Sheets for multi-device data entry.</li>
-</ul>
-</section>
-<section id="imagestoascii.jl" class="level3">
-<h3 class="anchored" data-anchor-id="imagestoascii.jl">ImagesToAscii.jl</h3>
-<ul>
-<li>Developing a <a href="https://github.com/bbtheo/ImagesToAscii.jl">Julia package</a> for converting images to ASCII art, exploring matrix operations and image processing.</li>
+<li><a href="https://github.com/bbtheo/reseptor">Python Shiny app</a> for interactive recipe creation on the Claude API via Chatlas.</li>
 </ul>
 </section>
 </section>
