@@ -352,188 +352,116 @@
   inset: 6pt,
   stroke: none
 )
-// Modern CV styling rules
-// Applied via #show rules
+// CV style for the Typst/PDF output. Shares the cover letter look (Source
+// Serif 4 body, Source Sans 3 labels). Quarto shifts "##" to level 1
+// (sections) and "###" to level 2 (entries). cv-columns and cv-meta are
+// emitted by typst-layout.lua.
 
-// Define accent color
-#let accent = rgb("#2563eb")
+#let ink = rgb("#1c2430")
+#let accent = rgb("#1f4e79")
+#let muted = rgb("#6b7280")
+#let rule = muted.lighten(55%)
+#let serif = ("Source Serif 4",)
+#let sans = ("Source Sans 3",)
 
-// Override the pandoc article function to skip title rendering
-// This prevents the empty first page caused by the title block
-#let article(
-  title: none,
-  subtitle: none,
-  authors: none,
-  date: none,
-  abstract: none,
-  abstract-title: none,
-  cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
-  paper: "us-letter",
-  lang: "en",
-  region: "US",
-  font: "libertinus serif",
-  fontsize: 11pt,
-  title-size: 1.5em,
-  subtitle-size: 1.25em,
-  heading-family: "libertinus serif",
-  heading-weight: "bold",
-  heading-style: "normal",
-  heading-color: black,
-  heading-line-height: 0.65em,
-  sectionnumbering: none,
-  pagenumbering: "1",
-  toc: false,
-  toc_title: none,
-  toc_depth: none,
-  toc_indent: 1.5em,
-  doc,
-) = {
-  set page(
-    paper: paper,
-    margin: margin,
-    numbering: pagenumbering,
-  )
-  set par(justify: true)
-  set text(lang: lang, region: region, font: font, size: fontsize)
-  set heading(numbering: sectionnumbering)
-  // NOTE: Title block removed - contact info is in the page header
-  if cols == 1 { doc } else { columns(cols, doc) }
-}
-
-// Title (# heading / document title) - hidden since it's in the page header
-#show heading.where(level: 1): it => {
-  // Don't render the title - it's in the page header
-}
-
-// Section headings (## in markdown)
-#show heading.where(level: 2): it => {
-  set text(size: 12pt, weight: "bold", fill: accent)
-  block(
-    width: 100%,
-    below: 0.5em,
-    above: 1em,
-  )[
-    #upper(it.body)
-    #v(-0.3em)
-    #line(length: 100%, stroke: 0.75pt + accent.lighten(40%))
-  ]
-}
-
-// Subsection headings (### in markdown)
-#show heading.where(level: 3): it => {
-  set text(size: 10.5pt, weight: "semibold", fill: rgb("#374151"))
-  block(below: 0.25em, above: 0.6em, it.body)
-}
-
-// Links styling
-#show link: it => {
-  set text(fill: accent)
-  underline(offset: 2pt, stroke: 0.5pt + accent.lighten(50%), it)
-}
-
-// List styling
-#set list(
-  indent: 0.8em,
-  body-indent: 0.4em,
-  marker: text(fill: accent, size: 7pt)[#sym.bullet],
+#let contact-links = (
+  link("tel:+358407181510")[+358 40 718 1510],
+  link("mailto:theo.blauberg@outlook.com")[theo.blauberg\@outlook.com],
+  link("https://github.com/bbtheo")[github.com/bbtheo],
+  link("https://www.linkedin.com/in/theo-blauberg/")[linkedin.com/in/theo-blauberg],
 )
 
-// Strong text
-#show strong: it => {
-  text(weight: "semibold", it.body)
-}
-
-// Paragraph spacing - increased leading for better readability
-#set par(justify: true, leading: 0.75em)
-
-// Block quotes (if any)
-#show quote: it => {
-  set text(style: "italic", fill: rgb("#4b5563"))
-  block(
-    inset: (left: 1em),
-    stroke: (left: 2pt + accent.lighten(70%)),
-    it.body
+// Replaces Quarto's article(); only the title is used.
+#let article(title: none, doc, ..args) = {
+  set page(
+    paper: "a4",
+    margin: (x: 1.9cm, top: 1.7cm, bottom: 1.8cm),
+    numbering: none,
+    footer: context {
+      set text(font: sans, size: 8pt, fill: muted)
+      [Theo Blauberg · Curriculum vitae]
+      h(1fr)
+      counter(page).display("1 / 1", both: true)
+    },
   )
+  set text(font: serif, size: 9.5pt, fill: ink, lang: "en", region: "GB",
+           number-type: "old-style")
+  set par(justify: false, leading: 0.6em, spacing: 0.85em)
+  set list(indent: 0em, body-indent: 0.55em, spacing: 0.55em,
+           marker: text(fill: muted)[–])
+  show link: set text(fill: accent)
+  show strong: set text(weight: "semibold")
+
+  block(below: 1.1em, text(size: 26pt, weight: "semibold", tracking: -0.01em, title))
+  {
+    set text(font: sans, number-type: "lining")
+    text(size: 9.5pt, weight: "medium", fill: muted, tracking: 0.06em,
+      upper[Senior Analytics Engineer | M.Sc. Economics | M.Sc. Data Science (ongoing)])
+    v(0.35em)
+    set text(size: 9pt, fill: muted)
+    contact-links.join(h(0.5em) + text(fill: muted.lighten(40%))[•] + h(0.5em))
+  }
+  v(0.2em)
+  line(length: 100%, stroke: 0.5pt + rule)
+  v(0.4em)
+  doc
 }
+
+// Section headings
+#show heading.where(level: 1): it => block(above: 1.5em, below: 0.75em, width: 100%, {
+  set text(font: sans, size: 9.5pt, weight: "semibold", fill: accent,
+           tracking: 0.08em, number-type: "lining")
+  upper(it.body)
+  v(-0.55em)
+  line(length: 100%, stroke: 0.5pt + rule)
+})
+
+// Entry headings (job titles, degrees, projects)
+#show heading.where(level: 2): it => block(above: 1.1em, below: 0.45em, sticky: true,
+  text(size: 10pt, weight: "semibold", it.body))
+
+// Organisation on the left, dates on the right
+#let cv-meta(org, dates) = block(above: 0.45em, below: 0.6em, sticky: true, grid(
+  columns: (1fr, auto),
+  column-gutter: 1em,
+  align: (left + bottom, right + bottom),
+  org,
+  text(font: sans, size: 8.5pt, fill: muted, number-type: "lining", dates),
+))
+
+// Sidebar (first column) is set slightly smaller than the main column.
+// Column tops carry no heading spacing, so the block adds it.
+#let cv-columns(widths, ..cols) = block(above: 1.5em, grid(
+  columns: widths,
+  column-gutter: 1.4em,
+  ..cols.pos().enumerate().map(((i, c)) => if i == 0 and cols.pos().len() > 1 {
+    set text(size: 9pt)
+    c
+  } else { c }),
+))
 #let brand-color = (:)
 #let brand-color-background = (:)
 #let brand-logo = (:)
 
 #set page(
   paper: "us-letter",
-  margin: (bottom: 1.5cm,left: 2cm,right: 2cm,top: 2.2cm,),
+  margin: (x: 1.25in, y: 1.25in),
   numbering: "1",
   columns: 1,
 )
 
 #show: doc => article(
   title: [Theo Blauberg],
-  font: ("Libertinus Serif",),
-  fontsize: 10pt,
-  heading-family: ("Libertinus Serif",),
   toc_title: [Table of contents],
   toc_depth: 3,
   doc,
 )
-// Page setup with contact header on every page
-#let accent = rgb("#2563eb")
 
-#set page(
-  header: {
-    set text(9pt)
-    grid(
-      columns: (1fr, auto),
-      align: (left, right),
-      [
-        #text(size: 14pt, weight: "bold", fill: rgb("#111827"))[Theo Blauberg]
-      ],
-      [
-        #text(fill: rgb("#4b5563"))[+358407181510]
-        #h(0.8em)
-        #text(fill: rgb("#9ca3af"))[|]
-        #h(0.8em)
-        #link("mailto:theo.blauberg@outlook.com")[theo.blauberg\@outlook.com]
-        #h(0.8em)
-        #text(fill: rgb("#9ca3af"))[|]
-        #h(0.8em)
-        #link("https://github.com/bbtheo")[GitHub]
-        #h(0.8em)
-        #text(fill: rgb("#9ca3af"))[|]
-        #h(0.8em)
-        #link("https://www.linkedin.com/in/theo-blauberg/")[LinkedIn]
-      ]
-    )
-    v(0.3em)
-    line(length: 100%, stroke: 1pt + accent)
-  },
-  footer: context {
-    if counter(page).get().first() > 1 {
-      set text(8pt, fill: rgb("#9ca3af"))
-      h(1fr)
-      [Page #counter(page).display()]
-    }
-  }
-)
-
-#block[
-#block[
-== Profile
+= Profile
 <profile>
 Senior Analytics Engineer with an advanced degree in Economics and extensive experience in econometrics, machine learning, and experimentation. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, interactive data applications, and internal analytics tooling.
 
-]
-#block[
-== Contact
-<contact>
-\+358407181510
-theo.blauberg\@outlook.com
-#link("https://github.com/bbtheo")[Github]
-#link("https://www.linkedin.com/in/theo-blauberg/")[Linkedin]
-]
-]
-#block[
-#block[
+#cv-columns((30fr, 70fr), [
 = Education
 <education>
 == Master's Program in Data Science
@@ -581,97 +509,78 @@ Intensive German language studies.
 - #strong[NVIDIA:] Fundamentals of Deep Learning
 - #strong[NVIDIA:] Fundamentals of Accelerated Computing with CUDA Python
 
-]
-#block[
+], [
 = Work Experience
 <work-experience>
 == Senior Analytics Engineer
 <senior-analytics-engineer>
-#block[
-#block[
+#cv-meta([
 #strong[Nordea]
 
-]
-#block[
+], [
 07/2025 -
 
-]
-]
+])
 - Build, maintain, and monitor machine learning models that deliver real-time fraud detection for card and account-to-account transactions.
 - Lead analytics initiatives with increased autonomy in model development and deployment decisions.
 - Maintain an internal R package for data analysis and visualization, significantly improving team productivity.
 
 == Data Analyst
 <data-analyst>
-#block[
-#block[
+#cv-meta([
 #strong[Nordea]
 
-]
-#block[
+], [
 07/2023 - 07/2025
 
-]
-]
+])
 - Collaborated within a team responsible for building and monitoring real-time fraud detection models.
 - Developed internal R packages, Shiny apps, and automated reports. Established a Data & Analytics community within the department.
 
 == Data Analyst
 <data-analyst-1>
-#block[
-#block[
+#cv-meta([
 #strong[VATT Institute for Economic Research]
 
-]
-#block[
+], [
 01/2023 - 06/2023
 
-]
-]
+])
 - Conducted analyses and co-authored research reports on electricity market data, focusing on #link("https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:2tRrZ1ZAMYUC")[consumer] and #link("https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:sJsF-0ZLhtgC")[company] responses to price shocks.
 - Designed and developed a #link("https://github.com/datahuone/shiny_app")[Shiny-based dashboard] for interactive data visualization.
 
 == Research Assistant
 <research-assistant>
-#block[
-#block[
+#cv-meta([
 #strong[VATT Institute for Economic Research]
 
-]
-#block[
+], [
 08/2022 - 01/2023
 
-]
-]
+])
 - Supported research projects with data preparation, analysis, and visualization tasks.
 
 == Project Worker
 <project-worker>
-#block[
-#block[
+#cv-meta([
 #strong[City of Tampere]
 
-]
-#block[
+], [
 05/2022 - 08/2022
 
-]
-]
+])
 - Analysed a randomised controlled experiment (\~5,000 users) testing whether information nudges could shift mobility behaviour, as part of the Keli project (Kestävämmän liikkumisen kehittäminen hiilijalanjälkilaskurin avulla).
 - Project co-funded by the Ministry of the Environment. Results published in a #link("https://scholar.google.fi/citations?view_op=view_citation&hl=en&user=19yd6u0AAAAJ&sortby=pubdate&citation_for_view=19yd6u0AAAAJ:NyGDZy8z5eUC")[working paper].
 
 == Intern
 <intern>
-#block[
-#block[
+#cv-meta([
 #strong[Embassy of Finland in Vienna]
 
-]
-#block[
+], [
 05/2021 - 08/2021
 
-]
-]
+])
 - Monitored and reported on Austrian economic developments to inform Finnish Government policy decisions.
 - Attended and reported on meetings with UN organizations and local politicians.
 
@@ -714,8 +623,7 @@ Authorized by the Western countries group to serve as vote counter in the Secret
 <board-member---economics-students-association>
 Served on the board contributing to strategic planning and student activities.
 
-]
-]
+])
 
 
 

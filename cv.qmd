@@ -37,15 +37,10 @@ format:
   markdown_github: default
   typst:
     toc: false
-    fontsize: 10pt
-    mainfont: "Libertinus Serif"
-    margin:
-      top: 2.2cm
-      bottom: 1.5cm
-      left: 2cm
-      right: 2cm
-    include-in-header: typst-show.typ
-    include-before-body: typst-header.typ
+    filters:
+      - typst-layout.lua
+    font-paths: fonts
+    include-in-header: cv-style.typ
     keep-typ: true
 format-links:
   - format: typst
@@ -65,7 +60,7 @@ format-links:
 Senior Analytics Engineer with an advanced degree in Economics and extensive experience in econometrics, machine learning, and experimentation. Currently completing a Master's in Data Science at the University of Helsinki. Proficient in R, Python, SQL, and GPU computing. Experienced in building production ML models, interactive data applications, and internal analytics tooling.
 :::
 
-::: {.column .header-col width="30%"}
+::: {.column .header-col .pdf-hide width="30%"}
 ### Contact
 
 <script src="https://kit.fontawesome.com/954a9d9f43.js" crossorigin="anonymous"></script>
