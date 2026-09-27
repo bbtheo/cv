@@ -543,7 +543,7 @@ theo.blauberg\@outlook.com
 
 - #strong[Major:] Data Science
 - Specializing in machine learning methods with emphasis on GPU-accelerated computing.
-- #link("https://github.com/bbtheo/ds-thesis")[#strong[Thesis:]] Applying tabular foundation models to the detection of fraud patterns in high-dimensional transaction data.
+- #link("https://github.com/bbtheo/ds-thesis")[#strong[Thesis:]] Applying tabular foundation models to the detection of fraud patterns in high-dimensional transaction data. Work in progress; #link("https://bbtheo.github.io/ds-thesis/")[current draft].
 
 == Master's Program in Economics
 <masters-program-in-economics>
@@ -569,16 +569,17 @@ Intensive German language studies.
 = Technical Skills
 <technical-skills>
 #strong[Languages:] R, Python, SQL, Julia, C++ \
-#strong[ML/AI:] Torch, tidymodels, scikit-learn, LLMs \
-#strong[Data:] dplyr, DuckDB, pandas, Arrow \
+#strong[Methods:] causal inference, RCT analysis, time-series econometrics \
+#strong[ML/AI:] Torch, tidymodels, scikit-learn, Claude Agent SDK, Anthropic Python SDK, Chatlas \
+#strong[Data:] dplyr, DuckDB, pandas, Arrow, Spark, Hive, Impala, Snowflake \
+#strong[GPU:] CUDA Python, RAPIDS cuDF \
+#strong[Engineering:] Docker, GitHub Actions, pytest, testthat \
 #strong[Web:] Shiny, Quarto, PowerBI, REST APIs \
 
 = Certifications
 <certifications>
 - #strong[NVIDIA:] Fundamentals of Deep Learning
 - #strong[NVIDIA:] Fundamentals of Accelerated Computing with CUDA Python
-- #strong[DataCamp:] Deep Learning in Python
-- #strong[DataCamp:] Data Scientist with R
 
 ]
 #block[
@@ -676,11 +677,22 @@ Intensive German language studies.
 
 = Projects
 <projects>
+== Running Coach - Self-Hosted Training Planner
+<running-coach---self-hosted-training-planner>
+- Building a self-hosted running coach that ingests Apple Health data into a canonical activity and vitals schema, maintains fitness and injury-load ledgers, and generates weekly plans from a deterministic guardrail engine.
+- A Claude Agent SDK reviewer proposes plan changes that are validated against the guardrails before application. Python, FastAPI, SQLite, Docker; deployed on a home server behind Tailscale with pytest coverage across the engine.
+
 == cuplyr - GPU-Accelerated dplyr
 <cuplyr---gpu-accelerated-dplyr>
 - Developing an R package that enables standard dplyr code to execute on GPU hardware through a RAPIDS cuDF backend.
-- Implements lazy evaluation with automatic query optimizations, achieving 40-77x speedups over dplyr on large datasets.
+- Implements lazy evaluation with automatic query optimizations. Benchmarks show 40-77x speedups over dplyr on GPU-resident data; parity end-to-end including transfer.
 - #link("https://github.com/bbtheo/cuplyr")[GitHub]
+
+== digitraffic - Fintraffic API Client
+<digitraffic---fintraffic-api-client>
+- Building an R package for Finland's Digitraffic road traffic sensor time series: 450+ roadside sensors, per-vehicle records, real-time and historical.
+- Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. Tested with GitHub Actions; to be submitted to CRAN.
+- #link("https://github.com/bbtheo/digitraffic")[GitHub]
 
 == bracketeer - Tournament Management Framework
 <bracketeer---tournament-management-framework>
@@ -688,26 +700,9 @@ Intensive German language studies.
 - Features a pipe-first API design for defining reusable tournament blueprints with automatic stage materialization and flexible result entry.
 - #link("https://github.com/bbtheo/bracketeer")[GitHub]
 
-== digitraffic - Finntraffic API Client
-<digitraffic---finntraffic-api-client>
-- Building an R package that provides tidy access to Finland's Digitraffic road traffic API, covering 450+ measurement stations with real-time speed, volume, and classification data.
-- Features tidyverse-native output, spatial filtering, built-in caching, and rate limiting. To be submitted to CRAN.
-- #link("https://github.com/bbtheo/digitraffic")[GitHub]
-
-== Reseptor - AI Recipe Assistant
-<reseptor---ai-recipe-assistant>
-- Built a web application for interactive recipe creation using Python Shiny and Claude API integration via Chatlas.
-- Features markdown output for easy recipe sharing and distribution.
-- #link("https://github.com/bbtheo/reseptor")[GitHub]
-
-== Petanque Liga
-<petanque-liga>
-- Built a #link("https://theoblauberg.shinyapps.io/petanque_liga/")[tournament management website] with automatic match scheduling and result tracking.
-- Backend powered by Google Sheets for multi-device data entry.
-
-== ImagesToAscii.jl
-<imagestoascii.jl>
-- Developing a #link("https://github.com/bbtheo/ImagesToAscii.jl")[Julia package] for converting images to ASCII art, exploring matrix operations and image processing.
+== Reseptor - Recipe Assistant
+<reseptor---recipe-assistant>
+- #link("https://github.com/bbtheo/reseptor")[Python Shiny app] for interactive recipe creation on the Claude API via Chatlas.
 
 = Positions of Responsibility
 <positions-of-responsibility>
